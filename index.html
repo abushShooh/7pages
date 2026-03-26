@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OkeyPost Header</title>
+    <link rel="stylesheet" href="./styles/output.css" />
+  </head>
+  <body class="min-h-screen font-sans text-slate-900 antialiased">
+    <main class="overflow-x-hidden">
+      <section class="relative overflow-hidden bg-[white] py-4 sm:py-6">
+        <div aria-hidden="true" class="pointer-events-none absolute inset-0">
+          <div class="absolute left-[-8%] top-[-35%] h-[220px] w-[220px] rounded-full bg-[white] blur-3xl sm:h-[300px] sm:w-[300px]"></div>
+          <div class="absolute right-[12%] top-[-50%] h-[220px] w-[220px] rounded-full bg-white/80 blur-3xl sm:h-[280px] sm:w-[280px]"></div>
+        </div>
+
+        <div class="relative w-full px-4 sm:px-6 lg:px-8">
+          <header class="rounded-[32px] bg-white px-4 backdrop-blur-sm [box-shadow:0_16px_42px_rgba(15,23,42,0.12)] sm:px-6 lg:px-8">
+            <div class="flex min-h-[88px] items-center justify-between gap-4">
+              <a href="#" class="shrink-0" aria-label="OkeyPost">
+                <img src="./img/logo.svg" alt="OkeyPost" class="h-10 w-auto sm:h-12" />
+              </a>
+
+              <nav class="hidden items-center gap-8 xl:flex">
+                <a href="#" class="text-[15px] font-semibold text-slate-900 transition hover:text-emerald-500">Как покупать</a>
+                <a href="#" class="text-[15px] font-semibold text-slate-900 transition hover:text-emerald-500">Распродажи</a>
+                <a href="#" class="text-[15px] font-semibold text-slate-900 transition hover:text-emerald-500">Цены</a>
+                <a href="#" class="text-[15px] font-semibold text-slate-900 transition hover:text-emerald-500">Помощь</a>
+                <a href="#" class="text-[15px] font-semibold text-slate-900 transition hover:text-emerald-500">Бонусы</a>
+                <a href="#" class="text-[15px] font-semibold text-slate-900 transition hover:text-emerald-500">Блог</a>
+                <a href="#" class="text-[15px] font-semibold text-slate-900 transition hover:text-emerald-500">Магазины</a>
+              </nav>
+
+              <div class="hidden items-center gap-4 lg:flex">
+                <a href="#" class="inline-flex items-center gap-3 text-[15px] font-semibold text-slate-900 transition hover:text-emerald-500">
+                  <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                    <path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Z" />
+                    <path d="M4 20a8 8 0 0 1 16 0" stroke-linecap="round" />
+                  </svg>
+                  <span>Вход</span>
+                </a>
+
+                <a href="#" class="inline-flex items-center justify-center rounded-full bg-[#00d46a] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#00bf60] focus:outline-none focus:ring-4 focus:ring-emerald-200">
+                  Связаться с нами
+                </a>
+              </div>
+
+              <button
+                id="menuButton"
+                type="button"
+                class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-slate-200 text-slate-900 transition hover:border-emerald-500 hover:text-emerald-500 xl:hidden"
+                aria-expanded="false"
+                aria-controls="mobileMenu"
+                aria-label="Открыть меню"
+              >
+                <svg id="menuOpenIcon" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round" />
+                </svg>
+                <svg id="menuCloseIcon" class="hidden h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M6 6 18 18M18 6 6 18" stroke-linecap="round" />
+                </svg>
+              </button>
+            </div>
+
+            <div id="mobileMenu" class="hidden border-t border-slate-200 py-5 xl:hidden">
+              <nav class="grid gap-3 md:grid-cols-2">
+                <a href="#" class="rounded-2xl border border-slate-200/80 px-4 py-3 text-sm font-semibold text-slate-900 transition hover:border-emerald-400 hover:text-emerald-500">Как покупать</a>
+                <a href="#" class="rounded-2xl border border-slate-200/80 px-4 py-3 text-sm font-semibold text-slate-900 transition hover:border-emerald-400 hover:text-emerald-500">Распродажи</a>
+                <a href="#" class="rounded-2xl border border-slate-200/80 px-4 py-3 text-sm font-semibold text-slate-900 transition hover:border-emerald-400 hover:text-emerald-500">Цены</a>
+                <a href="#" class="rounded-2xl border border-slate-200/80 px-4 py-3 text-sm font-semibold text-slate-900 transition hover:border-emerald-400 hover:text-emerald-500">Помощь</a>
+                <a href="#" class="rounded-2xl border border-slate-200/80 px-4 py-3 text-sm font-semibold text-slate-900 transition hover:border-emerald-400 hover:text-emerald-500">Бонусы</a>
+                <a href="#" class="rounded-2xl border border-slate-200/80 px-4 py-3 text-sm font-semibold text-slate-900 transition hover:border-emerald-400 hover:text-emerald-500">Блог</a>
+                <a href="#" class="rounded-2xl border border-slate-200/80 px-4 py-3 text-sm font-semibold text-slate-900 transition hover:border-emerald-400 hover:text-emerald-500 md:col-span-2">Магазины</a>
+              </nav>
+
+              <div class="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                <a href="#" class="inline-flex items-center justify-center gap-3 rounded-full border border-slate-200 px-5 py-3 text-sm font-semibold text-slate-900 transition hover:border-emerald-400 hover:text-emerald-500">
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                    <path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Z" />
+                    <path d="M4 20a8 8 0 0 1 16 0" stroke-linecap="round" />
+                  </svg>
+                  <span>Вход</span>
+                </a>
+
+                <a href="#" class="inline-flex w-full items-center justify-center rounded-full bg-[#00d46a] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#00bf60] focus:outline-none focus:ring-4 focus:ring-emerald-200 sm:w-auto">
+                  Связаться с нами
+                </a>
+              </div>
+            </div>
+          </header>
+        </div>
+      </section>
+
+      <section class="mt-4 px-4 sm:mt-6 sm:px-6 lg:px-8">
+        <div class="relative w-full overflow-hidden rounded-[32px] bg-[linear-gradient(135deg,#6d5df6_0%,#517de6_48%,#37c1f1_100%)] py-10 text-white [box-shadow:0_30px_80px_rgba(56,95,193,0.28)] sm:py-12 lg:py-16 xl:min-h-[680px] xl:py-[74px]">
+          <div aria-hidden="true" class="absolute inset-0">
+            <div class="absolute -left-20 bottom-0 h-48 w-48 rounded-full bg-white/10 blur-3xl sm:h-72 sm:w-72"></div>
+            <div class="absolute left-[18%] top-[12%] h-28 w-28 rounded-full bg-fuchsia-300/20 blur-3xl sm:h-44 sm:w-44"></div>
+            <div class="absolute right-[-8%] top-[8%] h-44 w-44 rounded-full bg-sky-200/30 blur-3xl sm:h-72 sm:w-72"></div>
+            <div class="absolute right-[12%] top-[24%] h-36 w-36 rounded-full bg-white/12 blur-3xl sm:h-64 sm:w-64"></div>
+          </div>
+
+          <div class="relative mx-auto max-w-[1280px] px-5 sm:px-8 lg:px-14 xl:px-16">
+            <div class="relative grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,560px)] lg:gap-4 xl:gap-6">
+              <div class="max-w-[640px] text-center lg:text-left">
+                <h1 class="max-w-[620px] text-[30px] font-extrabold leading-[1.02] tracking-[-0.05em] text-white sm:text-[38px] lg:text-[44px] xl:text-[56px]">
+                  Доставка товаров из Великобритании в Россию
+                </h1>
+
+                <p class="mt-5 max-w-[560px] text-base leading-8 text-white/84 sm:mx-auto sm:text-lg lg:mx-0 xl:mt-6 xl:text-[22px] xl:leading-[1.9]">
+                  Начните экономить до 80% на шопинге. Регистрируйтесь в OkeyPost, чтобы покупать со скидками в UK одежду, обувь, гаджеты известных брендов и безопасно отправлять вещи в Россию.
+                </p>
+
+                <div class="mt-8 flex justify-center lg:justify-start xl:mt-10">
+                  <a
+                    href="#"
+                    class="inline-flex min-h-14 items-center justify-center rounded-full bg-[#00d46a] px-8 text-sm font-extrabold text-white transition hover:bg-[#00bf60] focus:outline-none focus:ring-4 focus:ring-emerald-200 sm:min-h-16 sm:px-10 sm:text-base"
+                  >
+                    Получить адрес в UK
+                  </a>
+                </div>
+              </div>
+
+              <div class="relative mx-auto w-full max-w-[560px]">
+                <div aria-hidden="true" class="absolute inset-x-6 bottom-6 top-10 rounded-full bg-white/12 blur-3xl sm:inset-x-10"></div>
+                <img
+                  src="./img/illustration.svg"
+                  alt="Иллюстрация доставки OkeyPost"
+                  class="relative z-10 mx-auto w-full max-w-[520px] drop-shadow-[0_24px_50px_rgba(35,61,139,0.28)] sm:max-w-[560px] xl:max-w-[573px]"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-4 py-14 sm:px-6 sm:py-16 lg:px-8 xl:py-20">
+        <div class="w-full">
+          <div class="rounded-[36px] bg-white px-5 py-8 [box-shadow:0_24px_80px_rgba(15,23,42,0.06)] sm:px-7 md:px-8 lg:px-10 xl:px-12 xl:py-10">
+            <div class="flex flex-col gap-8 xl:gap-10">
+              <div class="flex flex-col gap-6 xl:gap-8">
+                <h2 class="max-w-[360px] text-[30px] font-extrabold leading-[1.05] tracking-[-0.04em] text-slate-900 sm:text-[38px] xl:text-[48px]">
+                  Насколько выгодно покупать?
+                </h2>
+
+                <div class="overflow-x-auto pb-2">
+                  <div class="flex min-w-max items-stretch rounded-[28px] bg-white ring-1 ring-slate-100 xl:w-full xl:min-w-0 xl:justify-between">
+                    <button type="button" class="inline-flex min-w-18 items-center justify-center rounded-l-[28px] px-5 text-[#02cd7d] xl:min-w-[76px]" aria-label="Предыдущая категория">
+                      <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                        <path d="M15 5 8 12l7 7" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </button>
+
+                    <button type="button" class="flex min-w-[170px] items-center justify-center gap-4 bg-[#f2f5ff] px-6 py-5 text-left xl:min-w-0 xl:flex-1">
+                      <img src="./img/clothes.svg" alt="" class="h-13 w-13 shrink-0" />
+                      <span class="text-lg font-bold text-slate-900">Одежда</span>
+                    </button>
+
+                    <button type="button" class="flex min-w-[180px] items-center justify-center gap-4 border-l border-slate-100 px-6 py-5 text-left xl:min-w-0 xl:flex-1">
+                      <img src="./img/tv.svg" alt="" class="h-13 w-13 shrink-0" />
+                      <span class="text-lg font-bold text-slate-900">Электроника</span>
+                    </button>
+
+                    <button type="button" class="flex min-w-[175px] items-center justify-center gap-4 border-l border-slate-100 px-6 py-5 text-left xl:min-w-0 xl:flex-1">
+                      <img src="./img/acsessuars.svg" alt="" class="h-13 w-13 shrink-0" />
+                      <span class="text-lg font-bold text-slate-900">Аксессуары</span>
+                    </button>
+
+                    <button type="button" class="flex min-w-[165px] items-center justify-center gap-4 border-l border-slate-100 px-6 py-5 text-left xl:min-w-0 xl:flex-1">
+                      <img src="./img/forKids.svg" alt="" class="h-13 w-13 shrink-0" />
+                      <span class="text-lg font-bold text-slate-900">Для детей</span>
+                    </button>
+
+                    <button type="button" class="flex min-w-[165px] items-center justify-center gap-4 border-l border-slate-100 px-6 py-5 text-left xl:min-w-0 xl:flex-1">
+                      <img src="./img/forSports.svg" alt="" class="h-13 w-13 shrink-0" />
+                      <span class="text-lg font-bold text-slate-900">Для спорта</span>
+                    </button>
+
+                    <button type="button" class="flex min-w-[165px] items-center justify-center gap-4 border-l border-slate-100 px-6 py-5 text-left xl:min-w-0 xl:flex-1">
+                      <img src="./img/cosmetics.svg" alt="" class="h-13 w-13 shrink-0" />
+                      <span class="text-lg font-bold text-slate-900">Косметика</span>
+                    </button>
+
+                    <button type="button" class="inline-flex min-w-18 items-center justify-center rounded-r-[28px] px-5 text-[#02cd7d] xl:min-w-[76px]" aria-label="Следующая категория">
+                      <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                        <path d="m9 5 7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid gap-8 xl:grid-cols-[1.05fr_minmax(320px,420px)_1.05fr] xl:items-center xl:gap-10">
+                <div class="order-2 flex flex-col gap-6 xl:order-1 xl:gap-8">
+                  <div class="max-w-[420px] text-center xl:text-left">
+                    <h3 class="text-3xl font-extrabold leading-[1.24] tracking-[-0.04em] text-slate-900 sm:text-[40px]">
+                      Columbia Barlow Pass 550 Turbodown Jacket
+                    </h3>
+                  </div>
+
+                  <div class="rounded-[28px] bg-[#f2f5ff] px-6 py-6 sm:px-7 sm:py-7 [box-shadow:0_18px_45px_rgba(15,23,42,0.04)]">
+                    <div class="flex items-center gap-5">
+                      <img src="./img/russianFlag.svg" alt="Флаг России" class="h-11 w-auto shrink-0 sm:h-13" />
+                      <div>
+                        <p class="text-lg text-slate-600 sm:text-xl">Цена в России</p>
+                        <p class="mt-2 text-3xl font-extrabold tracking-[-0.04em] text-slate-900 sm:text-[42px]">7891,46₽</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="order-1 xl:order-2">
+                  <div class="mx-auto flex max-w-[420px] flex-col items-center">
+                    <div class="relative flex h-[300px] w-[300px] items-center justify-center rounded-full bg-[#f2f5ff] sm:h-[360px] sm:w-[360px] lg:h-[410px] lg:w-[410px]">
+                      <img
+                        src="./img/Layer.svg"
+                        alt="Товар для сравнения"
+                        class="h-[200px] w-auto object-contain sm:h-[240px] lg:h-[290px]"
+                      />
+                    </div>
+
+                    <div class="mt-8 flex w-full items-center justify-between gap-4 sm:mt-10">
+                      <div class="flex items-center gap-3">
+                        <div class="flex h-20 w-20 items-center justify-center rounded-full bg-[#f2f5ff] sm:h-24 sm:w-24">
+                          <img src="./img/t-shirt.svg" alt="Футболка" class="h-14 w-auto sm:h-16" />
+                        </div>
+                        <svg class="h-7 w-7 text-[#02cd7d]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                          <path d="M20 12H4m0 0 6 6m-6-6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </div>
+
+                      <div class="flex items-center gap-3">
+                        <svg class="h-7 w-7 text-[#02cd7d]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                          <path d="M4 12h16m0 0-6-6m6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <div class="flex h-20 w-20 items-center justify-center rounded-full bg-[#f2f5ff] sm:h-24 sm:w-24">
+                          <img src="./img/jeans.svg" alt="Джинсы" class="h-14 w-auto sm:h-16" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="mt-8 text-center sm:mt-10">
+                      <p class="text-lg text-slate-500 sm:text-xl">Срок доставки примерно 10 дней</p>
+                      <p class="mt-3 text-3xl font-extrabold leading-[1.2] tracking-[-0.04em] text-slate-900 sm:text-[40px]">
+                        Вы экономите до <span class="text-[#02cd7d]">$119.56</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="order-3 flex flex-col gap-6 xl:gap-8">
+                  <div class="max-w-[420px] text-center xl:text-left">
+                    <p class="text-3xl font-extrabold leading-[1.24] tracking-[-0.04em] text-slate-900 sm:text-[40px]">
+                      Доставка одежды из Великобритании от <span class="text-[#02cd7d]">£7.79</span>
+                    </p>
+                  </div>
+
+                  <div class="rounded-[28px] bg-[#f2f5ff] px-6 py-6 sm:px-7 sm:py-7 [box-shadow:0_18px_45px_rgba(15,23,42,0.04)]">
+                    <div class="flex items-center gap-5">
+                      <img src="./img/britishFlag.svg" alt="Флаг Великобритании" class="h-11 w-auto shrink-0 sm:h-13" />
+                      <div>
+                        <p class="text-lg text-slate-600 sm:text-xl">Цена в UK</p>
+                        <p class="mt-2 text-3xl font-extrabold tracking-[-0.04em] text-[#02cd7d] sm:text-[42px]">£80.62</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid gap-px overflow-hidden rounded-[28px] bg-slate-200/70 [box-shadow:0_18px_50px_rgba(15,23,42,0.05)] md:grid-cols-2 xl:grid-cols-4">
+                <div class="flex items-center gap-4 bg-white px-6 py-6 sm:px-7">
+                  <img src="./img/calculator.svg" alt="" class="h-12 w-12 shrink-0" />
+                  <p class="text-xl font-bold leading-[1.25] text-slate-900">Экономия до 70%</p>
+                </div>
+
+                <div class="flex items-center gap-4 bg-white px-6 py-6 sm:px-7">
+                  <img src="./img/certification.svg" alt="" class="h-12 w-12 shrink-0" />
+                  <p class="text-xl font-bold leading-[1.25] text-slate-900">Только подлинная продукция</p>
+                </div>
+
+                <div class="flex items-center gap-4 bg-white px-6 py-6 sm:px-7">
+                  <img src="./img/delivery.svg" alt="" class="h-12 w-12 shrink-0" />
+                  <p class="text-xl font-bold leading-[1.25] text-slate-900">Оперативная доставка</p>
+                </div>
+
+                <div class="flex items-center gap-4 bg-white px-6 py-6 sm:px-7">
+                  <img src="./img/Notebook.svg" alt="" class="h-12 w-12 shrink-0" />
+                  <p class="text-xl font-bold leading-[1.25] text-slate-900">Огромный выбор товаров</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-4 pb-14 sm:px-6 sm:pb-16 lg:px-8 xl:pb-20">
+        <div class="relative overflow-hidden rounded-[36px] bg-[linear-gradient(95deg,#5d63da_0%,#4d8ed8_48%,#36cfff_100%)]">
+          <div aria-hidden="true" class="absolute -left-10 top-8 h-48 w-48 rounded-full bg-white/10 blur-3xl sm:h-64 sm:w-64"></div>
+          <div aria-hidden="true" class="absolute bottom-0 right-0 h-56 w-56 rounded-full bg-white/10 blur-3xl sm:h-72 sm:w-72"></div>
+
+          <div class="relative mx-auto grid max-w-[1320px] items-center gap-10 px-6 py-10 sm:px-8 sm:py-12 lg:grid-cols-[minmax(300px,430px)_minmax(0,1fr)] lg:px-12 xl:px-16 xl:py-14">
+            <div class="mx-auto w-full max-w-[410px]">
+              <img
+                src="./img/illustration2.svg"
+                alt="Иллюстрация помощи с оформлением заказов"
+                class="mx-auto w-full max-w-[402px] object-contain"
+              />
+            </div>
+
+            <div class="max-w-[760px] text-center lg:text-left">
+              <h2 class="text-[24px] font-extrabold leading-[1.2] tracking-[-0.04em] text-white sm:text-[30px] xl:text-[36px]">
+                Поручите нашим мастерам шопинга оформить заказы в английских магазинах и освободите время для более важных дел.
+              </h2>
+              <p class="mt-5 text-lg leading-[1.7] text-white/80 sm:text-xl">
+                Такой способ покупки также подойдёт, если магазин принимает только английские карты.
+              </p>
+              <button
+                type="button"
+                class="mt-8 inline-flex min-h-[64px] items-center justify-center rounded-full bg-[#02cd7d] px-10 text-lg font-bold text-white transition hover:bg-[#00ba71] sm:min-h-[68px] sm:px-14"
+              >
+                Попробовать
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8 xl:pb-24">
+        <div class="mx-auto max-w-[1400px]">
+          <div class="mx-auto max-w-[1120px]">
+            <div class="max-w-[860px]">
+              <h2 class="text-[30px] font-extrabold leading-[1.14] tracking-[-0.04em] text-slate-900 sm:text-[38px] xl:text-[48px]">
+                OkeyPost удобная и быстрая доставка посылок из Великобритании
+              </h2>
+              <p class="mt-6 max-w-[870px] text-lg leading-[1.9] text-slate-500 sm:text-xl">
+                Рассчитайте стоимость доставки из Англии к вам домой. Мы получим ваши посылки на складе, при необходимости объединим несколько доставок в одну и отправим их к вам надежно упакованными.
+              </p>
+            </div>
+
+            <div class="mt-10 rounded-[36px] bg-white px-6 py-8 [box-shadow:0_24px_80px_rgba(15,23,42,0.08)] sm:px-8 sm:py-9 lg:mt-12 lg:px-10 xl:px-12 xl:py-10">
+              <form class="space-y-8">
+                <div class="grid items-stretch gap-6 xl:grid-cols-5 xl:gap-6">
+                  <label class="flex h-full flex-col">
+                    <span class="text-base font-bold text-slate-900">Страна:</span>
+                    <span class="mt-auto flex items-center gap-3 border-b border-slate-900/20 pt-4 pb-5">
+                      <img src="./img/earth.svg" alt="" class="h-6 w-6 shrink-0" />
+                      <select class="w-full appearance-none bg-transparent text-xl text-slate-700 outline-none">
+                        <option>Россия</option>
+                      </select>
+                      <svg class="h-5 w-5 shrink-0 text-slate-500" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                        <path d="m5 7.5 5 5 5-5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                  </label>
+
+                  <label class="flex h-full flex-col">
+                    <span class="text-base font-bold text-slate-900">Город:</span>
+                    <span class="mt-auto flex items-center gap-3 border-b border-slate-900/20 pt-4 pb-5">
+                      <img src="./img/Buildings.svg" alt="" class="h-6 w-6 shrink-0" />
+                      <input
+                        type="text"
+                        value="Москва"
+                        class="w-full bg-transparent text-xl text-slate-700 outline-none"
+                      />
+                    </span>
+                  </label>
+
+                  <label class="flex h-full flex-col">
+                    <span class="text-base font-bold text-slate-900">Индекс:</span>
+                    <span class="mt-auto flex items-center gap-3 border-b border-slate-900/20 pt-4 pb-5">
+                      <img src="./img/FileText.svg" alt="" class="h-6 w-6 shrink-0" />
+                      <input
+                        type="text"
+                        placeholder="Введите индекс"
+                        class="w-full bg-transparent text-xl text-slate-700 outline-none placeholder:text-slate-400"
+                      />
+                    </span>
+                  </label>
+
+                  <label class="flex h-full flex-col">
+                    <span class="text-base font-bold text-slate-900">Вес посылки:</span>
+                    <span class="mt-auto flex items-center gap-3 border-b border-slate-900/20 pt-4 pb-5">
+                      <img src="./img/Barbell.svg" alt="" class="h-6 w-6 shrink-0" />
+                      <input
+                        type="text"
+                        value="0,5"
+                        class="w-full bg-transparent text-xl text-slate-700 outline-none"
+                      />
+                    </span>
+                  </label>
+
+                  <label class="flex h-full flex-col">
+                    <span class="text-sm font-bold leading-snug text-slate-900">Дополнительные услуги:</span>
+                    <span class="mt-auto flex items-center gap-3 border-b border-slate-900/20 pt-4 pb-5">
+                      <img src="./img/FileText.svg" alt="" class="h-6 w-6 shrink-0" />
+                      <select class="w-full appearance-none bg-transparent text-xl text-slate-700 outline-none">
+                        <option>Выберите услуги</option>
+                      </select>
+                      <svg class="h-5 w-5 shrink-0 text-slate-500" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                        <path d="m5 7.5 5 5 5-5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                  </label>
+                </div>
+
+                <button
+                  type="submit"
+                  class="inline-flex min-h-[64px] items-center justify-center rounded-full bg-[#02cd7d] px-12 text-lg font-bold text-white transition hover:bg-[#00ba71] sm:min-h-[68px] sm:px-16"
+                >
+                  Рассчитать
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8 xl:pb-24">
+        <div class="mx-auto max-w-[1400px]">
+          <div class="mx-auto max-w-[1400px]">
+            <h2 class="text-[30px] font-extrabold leading-[1.12] tracking-[-0.04em] text-slate-900 sm:text-[38px] xl:text-[42px]">
+              Варианты доставки:
+            </h2>
+
+            <div class="mt-8 space-y-4 sm:mt-10">
+              <article class="rounded-[28px] bg-white px-5 py-5 [box-shadow:0_20px_60px_rgba(15,23,42,0.06)] sm:px-6 lg:px-8">
+                <div class="flex flex-col gap-5 xl:flex-row xl:items-center xl:justify-between xl:gap-6">
+                  <div class="flex items-center gap-4 xl:min-w-[320px] xl:flex-1">
+                    <img src="./img/russianMail.svg" alt="" class="h-11 w-11 shrink-0" />
+                    <h3 class="text-xl font-extrabold uppercase tracking-[-0.03em] text-slate-900 sm:text-[26px] xl:text-[28px]">
+                      Почта России
+                    </h3>
+                  </div>
+
+                  <div class="grid gap-4 border-slate-200 xl:grid-cols-[180px_210px_140px_32px] xl:items-center xl:gap-0">
+                    <div class="xl:border-l xl:border-slate-200 xl:pl-8">
+                      <p class="text-sm text-slate-500 sm:text-base">Сроки:</p>
+                      <p class="mt-1.5 text-xl font-extrabold tracking-[-0.03em] text-slate-900 sm:text-[28px]">10-14 дней</p>
+                    </div>
+
+                    <div class="xl:border-l xl:border-slate-200 xl:pl-8">
+                      <p class="text-sm text-slate-500 sm:text-base">Стоимость доставки:</p>
+                      <div class="mt-2 flex items-center gap-2">
+                        <p class="text-xl font-extrabold tracking-[-0.03em] text-slate-900 sm:text-[28px]">от £27.00</p>
+                        <img src="./img/Inf.svg" alt="" class="h-4 w-4 shrink-0" />
+                      </div>
+                    </div>
+
+                    <div class="xl:border-l xl:border-slate-200 xl:pl-8">
+                      <p class="text-sm text-slate-500 sm:text-base">Итого:</p>
+                      <p class="mt-1.5 text-xl font-extrabold tracking-[-0.03em] text-slate-900 sm:text-[28px]">£41.99</p>
+                    </div>
+
+                    <button type="button" class="inline-flex h-8 w-8 items-center justify-center self-start text-[#02cd7d] xl:self-center" aria-label="Показать детали доставки">
+                      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                        <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="rounded-[28px] bg-white px-5 py-5 [box-shadow:0_20px_60px_rgba(15,23,42,0.06)] sm:px-6 lg:px-8">
+                <div class="flex flex-col gap-5 xl:flex-row xl:items-center xl:justify-between xl:gap-6">
+                  <div class="flex items-center gap-4 xl:min-w-[320px] xl:flex-1">
+                    <img src="./img/ems.svg" alt="" class="h-11 w-11 shrink-0" />
+                    <h3 class="text-xl font-extrabold uppercase tracking-[-0.03em] text-slate-900 sm:text-[26px] xl:text-[28px]">
+                      EMS Почта Россия
+                    </h3>
+                  </div>
+
+                  <div class="grid gap-4 border-slate-200 xl:grid-cols-[180px_210px_140px_32px] xl:items-center xl:gap-0">
+                    <div class="xl:border-l xl:border-slate-200 xl:pl-8">
+                      <p class="text-sm text-slate-500 sm:text-base">Сроки:</p>
+                      <p class="mt-1.5 text-xl font-extrabold tracking-[-0.03em] text-slate-900 sm:text-[28px]">9-12 дней</p>
+                    </div>
+
+                    <div class="xl:border-l xl:border-slate-200 xl:pl-8">
+                      <p class="text-sm text-slate-500 sm:text-base">Стоимость доставки:</p>
+                      <div class="mt-2 flex items-center gap-2">
+                        <p class="text-xl font-extrabold tracking-[-0.03em] text-slate-900 sm:text-[28px]">от £40.00</p>
+                        <img src="./img/Inf.svg" alt="" class="h-4 w-4 shrink-0" />
+                      </div>
+                    </div>
+
+                    <div class="xl:border-l xl:border-slate-200 xl:pl-8">
+                      <p class="text-sm text-slate-500 sm:text-base">Итого:</p>
+                      <p class="mt-1.5 text-xl font-extrabold tracking-[-0.03em] text-slate-900 sm:text-[28px]">£54.55</p>
+                    </div>
+
+                    <button type="button" class="inline-flex h-8 w-8 items-center justify-center self-start text-[#02cd7d] xl:self-center" aria-label="Показать детали доставки">
+                      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                        <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="rounded-[28px] bg-white px-5 py-5 [box-shadow:0_20px_60px_rgba(15,23,42,0.06)] sm:px-6 lg:px-8">
+                <div class="flex flex-col gap-5 xl:flex-row xl:items-center xl:justify-between xl:gap-6">
+                  <div class="flex items-center gap-4 xl:min-w-[320px] xl:flex-1">
+                    <img src="./img/miniRussianMail.svg" alt="" class="h-11 w-11 shrink-0" />
+                    <h3 class="text-xl font-extrabold uppercase tracking-[-0.03em] text-slate-900 sm:text-[26px] xl:text-[28px]">
+                      Почта России Мелкие пакеты
+                    </h3>
+                  </div>
+
+                  <div class="grid gap-4 border-slate-200 xl:grid-cols-[180px_210px_140px_32px] xl:items-center xl:gap-0">
+                    <div class="xl:border-l xl:border-slate-200 xl:pl-8">
+                      <p class="text-sm text-slate-500 sm:text-base">Сроки:</p>
+                      <p class="mt-1.5 text-xl font-extrabold tracking-[-0.03em] text-slate-900 sm:text-[28px]">10-14 дней</p>
+                    </div>
+
+                    <div class="xl:border-l xl:border-slate-200 xl:pl-8">
+                      <p class="text-sm text-slate-500 sm:text-base">Стоимость доставки:</p>
+                      <div class="mt-2 flex items-center gap-2">
+                        <p class="text-xl font-extrabold tracking-[-0.03em] text-slate-900 sm:text-[28px]">от £13.00</p>
+                        <img src="./img/Inf.svg" alt="" class="h-4 w-4 shrink-0" />
+                      </div>
+                    </div>
+
+                    <div class="xl:border-l xl:border-slate-200 xl:pl-8">
+                      <p class="text-sm text-slate-500 sm:text-base">Итого:</p>
+                      <p class="mt-1.5 text-xl font-extrabold tracking-[-0.03em] text-slate-900 sm:text-[28px]">£90.50</p>
+                    </div>
+
+                    <button type="button" class="inline-flex h-8 w-8 items-center justify-center self-start text-[#02cd7d] xl:self-center" aria-label="Показать детали доставки">
+                      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                        <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="mt-16 sm:mt-20 xl:mt-24">
+              <div class="max-w-[760px]">
+                <h2 class="text-[30px] font-extrabold leading-[1.14] tracking-[-0.04em] text-slate-900 sm:text-[38px] xl:text-[48px]">
+                  4 простых шага для ваших покупок в Великобритании
+                </h2>
+              </div>
+
+              <div class="mt-10 grid gap-8 md:grid-cols-2 xl:mt-14 xl:grid-cols-4 xl:gap-10">
+                <article class="flex flex-col">
+                  <div class="flex h-[220px] items-center justify-center rounded-[32px] bg-transparent">
+                    <img src="./img/illustration3.svg" alt="Вы выбираете товар" class="h-full w-full max-w-[280px] object-contain" />
+                  </div>
+                  <h3 class="mt-5 text-2xl font-extrabold uppercase leading-[1.2] tracking-[-0.03em] text-slate-900">
+                    Вы выбираете товар
+                  </h3>
+                  <p class="mt-4 text-lg leading-[1.7] text-slate-500">
+                    в английском магазине, оплачиваете и указываете <span class="font-bold text-[#02cd7d]">адрес склада</span> OkeyPost
+                  </p>
+                </article>
+
+                <article class="flex flex-col">
+                  <div class="flex h-[220px] items-center justify-center rounded-[32px] bg-transparent">
+                    <img src="./img/illustration5.svg" alt="Покупки приходят на склад" class="h-full w-full max-w-[280px] object-contain" />
+                  </div>
+                  <h3 class="mt-5 text-2xl font-extrabold uppercase leading-[1.2] tracking-[-0.03em] text-slate-900">
+                    Покупки приходят на склад
+                  </h3>
+                  <p class="mt-4 text-lg leading-[1.7] text-slate-500">
+                    и появляются в вашем личном кабинете на нашем сайте
+                  </p>
+                </article>
+
+                <article class="flex flex-col">
+                  <div class="flex h-[220px] items-center justify-center rounded-[32px] bg-transparent">
+                    <img src="./img/illustration6.svg" alt="Отправляем их к вам домой" class="h-full w-full max-w-[280px] object-contain" />
+                  </div>
+                  <h3 class="mt-5 text-2xl font-extrabold uppercase leading-[1.2] tracking-[-0.03em] text-slate-900">
+                    Отправляем их к вам домой
+                  </h3>
+                  <p class="mt-4 text-lg leading-[1.7] text-slate-500">
+                    в надежной упаковке, по выгодной цене и очень быстро
+                  </p>
+                </article>
+
+                <article class="flex flex-col">
+                  <div class="flex h-[220px] items-center justify-center rounded-[32px] bg-transparent">
+                    <img src="./img/illustration4.svg" alt="Забираете свою посылку" class="h-full w-full max-w-[280px] object-contain" />
+                  </div>
+                  <h3 class="mt-5 text-2xl font-extrabold uppercase leading-[1.2] tracking-[-0.03em] text-slate-900">
+                    Забираете свою посылку
+                  </h3>
+                  <p class="mt-4 text-lg leading-[1.7] text-slate-500">
+                    в пункте выдачи, на почте или с курьером
+                  </p>
+                </article>
+              </div>
+
+              <div class="mt-12 max-w-[780px] xl:mt-16">
+                <p class="text-xl leading-[1.9] text-slate-500 sm:text-[32px] sm:leading-[1.55]">
+                  Не хотите разбираться самостоятельно, наши мастера шопинга с радостью купят все товары за вас.
+                </p>
+                <button
+                  type="button"
+                  class="mt-8 inline-flex min-h-[64px] items-center justify-center rounded-full bg-[#02cd7d] px-10 text-lg font-bold text-white transition hover:bg-[#00ba71] sm:min-h-[68px] sm:px-14"
+                >
+                  Быстрая покупка
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-4 pb-14 sm:px-6 sm:pb-16 lg:px-8 xl:pb-20">
+        <div class="relative overflow-hidden rounded-[36px] bg-[linear-gradient(95deg,#5d63da_0%,#4d8ed8_48%,#36cfff_100%)]">
+          <div aria-hidden="true" class="absolute -left-10 top-8 h-48 w-48 rounded-full bg-white/10 blur-3xl sm:h-64 sm:w-64"></div>
+          <div aria-hidden="true" class="absolute bottom-0 right-0 h-56 w-56 rounded-full bg-white/10 blur-3xl sm:h-72 sm:w-72"></div>
+
+          <div class="relative mx-auto grid max-w-[1320px] items-center gap-10 px-6 py-10 sm:px-8 sm:py-12 lg:grid-cols-[minmax(300px,430px)_minmax(0,1fr)] lg:px-12 xl:px-16 xl:py-14">
+            <div class="mx-auto w-full max-w-[420px]">
+              <img
+                src="./img/illustration7.svg"
+                alt="Виртуальный тур по складу"
+                class="mx-auto w-full max-w-[411px] object-contain"
+              />
+            </div>
+
+            <div class="max-w-[760px] text-center lg:text-left">
+              <h2 class="text-[28px] font-extrabold leading-[1.18] tracking-[-0.04em] text-white sm:text-[34px] xl:text-[42px]">
+                Виртуальный тур по нашему складу в реальном времени
+              </h2>
+              <p class="mt-5 text-lg leading-[1.7] text-white/80 sm:text-xl">
+                Вы можете всегда посмотреть на нашу слаженную работу на складе
+              </p>
+              <button
+                type="button"
+                class="mt-8 inline-flex min-h-[64px] items-center justify-center rounded-full bg-[#02cd7d] px-10 text-lg font-bold text-white transition hover:bg-[#00ba71] sm:min-h-[68px] sm:px-14"
+              >
+                Попробовать
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8 xl:pb-24">
+        <div class="mx-auto max-w-[1400px]">
+          <div class="mx-auto max-w-[1200px]">
+            <div class="max-w-[860px]">
+              <h2 class="text-3xl font-extrabold leading-[1.14] tracking-[-0.04em] text-slate-900 sm:text-[42px] xl:text-[56px]">
+                120 000 довольных клиентов в России уже сделали свой выбор
+              </h2>
+              <p class="mt-6 max-w-[760px] text-lg leading-[1.9] text-slate-500 sm:text-xl">
+                За последний год десятки тысяч наших клиентов заказали товары из Англии и оставили 19 633 отзыва
+              </p>
+            </div>
+
+            <div class="mt-10 grid gap-6 lg:mt-12 lg:grid-cols-3 xl:gap-8">
+              <article class="rounded-[28px] bg-white px-7 py-8 [box-shadow:0_18px_55px_rgba(15,23,42,0.06)] sm:px-8">
+                <img src="./img/paymount.svg" alt="" class="h-[52px] w-[52px]" />
+                <h3 class="mt-7 text-xl font-extrabold leading-[1.25] tracking-[-0.03em] text-slate-900 sm:text-[28px]">
+                  Больше не значит дороже
+                </h3>
+                <p class="mt-4 text-lg leading-[1.8] text-slate-500">
+                  С ростом веса посылки цена за каждые 0.5 кг уменьшается в прогрессии.
+                </p>
+              </article>
+
+              <article class="rounded-[28px] bg-white px-7 py-8 [box-shadow:0_18px_55px_rgba(15,23,42,0.06)] sm:px-8">
+                <img src="./img/HightAnalisproduct.svg" alt="" class="h-[52px] w-[52px]" />
+                <h3 class="mt-7 text-xl font-extrabold leading-[1.25] tracking-[-0.03em] text-slate-900 sm:text-[28px]">
+                  Быстрая обработка посылок
+                </h3>
+                <p class="mt-4 text-lg leading-[1.8] text-slate-500">
+                  Посылка обрабатывается не дольше 48 часов после поступления на склад.
+                </p>
+              </article>
+
+              <article class="rounded-[28px] bg-white px-7 py-8 [box-shadow:0_18px_55px_rgba(15,23,42,0.06)] sm:px-8">
+                <img src="./img/message.svg" alt="" class="h-[52px] w-[52px]" />
+                <h3 class="mt-7 text-xl font-extrabold leading-[1.25] tracking-[-0.03em] text-slate-900 sm:text-[28px]">
+                  SMS-уведомления
+                </h3>
+                <p class="mt-4 text-lg leading-[1.8] text-slate-500">
+                  Отслеживайте весь процесс с помощью sms-уведомлений.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8 xl:pb-24">
+        <div class="mx-auto max-w-[1400px]">
+          <div class="mx-auto max-w-[1400px]">
+            <h2 class="text-3xl font-extrabold leading-[1.12] tracking-[-0.04em] text-slate-900 sm:text-[42px] xl:text-[48px]">
+              Отзывы и цитаты блогеров:
+            </h2>
+
+            <div class="mt-8 grid gap-6 sm:mt-10 xl:grid-cols-2 xl:gap-8">
+              <article class="rounded-[28px] bg-white p-5 [box-shadow:0_18px_55px_rgba(15,23,42,0.06)] sm:p-6">
+                <div class="grid gap-5 lg:grid-cols-[240px_minmax(0,1fr)] lg:items-start">
+                  <div class="overflow-hidden rounded-[22px] bg-slate-100 aspect-square">
+                    <img src="./img/фото-1.svg" alt="Фото отзыва Nikolay S" class="h-full w-full object-cover" />
+                  </div>
+
+                  <div class="flex h-full flex-col">
+                    <div>
+                      <h3 class="text-2xl font-extrabold tracking-[-0.03em] text-slate-900 sm:text-[30px]">NIKOLAY S</h3>
+                      <p class="mt-2 text-xl tracking-[0.18em] text-[#ffb800]">★★★★★</p>
+                      <p class="mt-5 text-lg leading-[1.8] text-slate-500 sm:text-xl">
+                        Ваша доставка самая быстрая и дешёвая!!!
+                      </p>
+                    </div>
+
+                    <div class="mt-8 space-y-2 text-lg sm:text-xl">
+                      <div class="flex flex-wrap gap-x-4 gap-y-1">
+                        <span class="font-bold text-slate-900">Дата:</span>
+                        <span class="text-slate-500">16 Ноября 2021</span>
+                      </div>
+                      <div class="flex flex-wrap gap-x-4 gap-y-1">
+                        <span class="font-bold text-slate-900">Город:</span>
+                        <span class="text-slate-500">Санкт-Петербург</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="rounded-[28px] bg-white p-5 [box-shadow:0_18px_55px_rgba(15,23,42,0.06)] sm:p-6">
+                <div class="grid gap-5 lg:grid-cols-[240px_minmax(0,1fr)] lg:items-start">
+                  <div class="overflow-hidden rounded-[22px] bg-slate-100 aspect-square">
+                    <img src="./img/фото-2.svg" alt="Фото отзыва Dmitriy D" class="h-full w-full object-cover" />
+                  </div>
+
+                  <div class="flex h-full flex-col">
+                    <div>
+                      <h3 class="text-2xl font-extrabold tracking-[-0.03em] text-slate-900 sm:text-[30px]">DMITRIY D</h3>
+                      <p class="mt-2 text-xl tracking-[0.18em] text-[#ffb800]">★★★★★</p>
+                      <p class="mt-5 text-lg leading-[1.8] text-slate-500 sm:text-xl">
+                        Пуховик Levi’s с eBay. Всё приехало быстро и целым.
+                      </p>
+                    </div>
+
+                    <div class="mt-8 space-y-2 text-lg sm:text-xl">
+                      <div class="flex flex-wrap gap-x-4 gap-y-1">
+                        <span class="font-bold text-slate-900">Дата:</span>
+                        <span class="text-slate-500">16 Ноября 2021</span>
+                      </div>
+                      <div class="flex flex-wrap gap-x-4 gap-y-1">
+                        <span class="font-bold text-slate-900">Город:</span>
+                        <span class="text-slate-500">Москва</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="rounded-[28px] bg-white p-5 [box-shadow:0_18px_55px_rgba(15,23,42,0.06)] sm:p-6">
+                <div class="grid gap-5 lg:grid-cols-[240px_minmax(0,1fr)] lg:items-start">
+                  <div class="overflow-hidden rounded-[22px] bg-slate-100 aspect-square">
+                    <img src="./img/фото-3.svg" alt="Фото отзыва Vladimir E" class="h-full w-full object-cover" />
+                  </div>
+
+                  <div class="flex h-full flex-col">
+                    <div>
+                      <h3 class="text-2xl font-extrabold tracking-[-0.03em] text-slate-900 sm:text-[30px]">VLADIMIR E</h3>
+                      <p class="mt-2 text-xl tracking-[0.18em] text-[#ffb800]">★★★★★</p>
+                      <p class="mt-5 text-lg leading-[1.8] text-slate-500 sm:text-xl">
+                        Огонь, как всегда! Отдельное спасибо за доп.упаковку, часики от Apple пришли в простом бумажном пакете )
+                      </p>
+                    </div>
+
+                    <div class="mt-8 space-y-2 text-lg sm:text-xl">
+                      <div class="flex flex-wrap gap-x-4 gap-y-1">
+                        <span class="font-bold text-slate-900">Дата:</span>
+                        <span class="text-slate-500">16 Ноября 2021</span>
+                      </div>
+                      <div class="flex flex-wrap gap-x-4 gap-y-1">
+                        <span class="font-bold text-slate-900">Город:</span>
+                        <span class="text-slate-500">Санкт-Петербург</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="rounded-[28px] bg-white p-5 [box-shadow:0_18px_55px_rgba(15,23,42,0.06)] sm:p-6">
+                <div class="grid gap-5 lg:grid-cols-[240px_minmax(0,1fr)] lg:items-start">
+                  <div class="overflow-hidden rounded-[22px] bg-slate-100 aspect-square">
+                    <img src="./img/фото-4.svg" alt="Фото отзыва Оксана" class="h-full w-full object-cover" />
+                  </div>
+
+                  <div class="flex h-full flex-col">
+                    <div>
+                      <h3 class="text-2xl font-extrabold tracking-[-0.03em] text-slate-900 sm:text-[30px]">Оксана</h3>
+                      <p class="mt-2 text-xl tracking-[0.18em] text-[#ffb800]">★★★★★</p>
+                      <p class="mt-5 text-lg leading-[1.8] text-slate-500 sm:text-xl">
+                        Очень быстро, надежно! Как всегда большое спасибо за работу!
+                      </p>
+                    </div>
+
+                    <div class="mt-8 space-y-2 text-lg sm:text-xl">
+                      <div class="flex flex-wrap gap-x-4 gap-y-1">
+                        <span class="font-bold text-slate-900">Дата:</span>
+                        <span class="text-slate-500">16 Ноября 2021</span>
+                      </div>
+                      <div class="flex flex-wrap gap-x-4 gap-y-1">
+                        <span class="font-bold text-slate-900">Город:</span>
+                        <span class="text-slate-500">Odintsovo</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <button
+              type="button"
+              class="mt-8 inline-flex min-h-[64px] items-center justify-center rounded-full bg-[#02cd7d] px-10 text-lg font-bold text-white transition hover:bg-[#00ba71] sm:min-h-[68px] sm:px-14"
+            >
+              Все отзывы
+            </button>
+
+            <div class="mt-16 max-w-[1380px] sm:mt-20 xl:mt-24">
+              <h2 class="text-3xl font-extrabold leading-[1.14] tracking-[-0.04em] text-slate-900 sm:text-[42px] xl:text-[56px]">
+                Ваш личный адрес в Великобритании для покупок
+              </h2>
+
+              <div class="mt-8 space-y-6 text-lg leading-[1.95] text-slate-500 sm:text-xl">
+                <p>
+                  С нами вы получаете целых два адреса в UK! У нас есть два склада для приема посылок — в Лондоне и Манчестере. Указывайте в магазине тот из них, отправка на который обойдется дешевле или покупка будет без налогов. Чаще всего в Лондоне наши клиенты заказывают одежду и обувь, а в Манчестер идут гаджеты и всё остальное. С OkeyPost вы всегда получаете максимальную выгоду!
+                </p>
+                <p>
+                  При доставке из UK в Россию все ваши товары обязательно страхуются. Прием посылок на наш склад, их обработка, удаление лишних коробок, хранение сроком до 70 дней — у нас полностью бесплатно. Мы также бесплатно проводим объединение посылок из разных магазинов в одну. Это необходимо для снижения стоимости доставки посылок из UK в Россию.
+                </p>
+                <p>
+                  У нас самая выгодная доставка! От $11.99 за посылку! А если у вас есть какие-то особенные требования, вроде проверки техники или дополнительной пленки для самых хрупких товаров, — операторы нашего склада с радостью выполнят их по спецзапросу.
+                </p>
+                <p>
+                  Okeypost.com — это надежно, быстро и выгодно. А в наших соцсетях вы всегда найдете информацию о лучших скидках английских магазинов. Не обязательно заходить в Черную пятницу или Prime Day, крутые акции проходят каждый день!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-4 pb-10 pt-14 sm:px-6 sm:pb-12 sm:pt-16 lg:px-8 lg:pb-14 lg:pt-20">
+        <div class="mx-auto max-w-[1800px]">
+          <div class="overflow-hidden rounded-[34px] bg-[linear-gradient(95deg,#5d63da_0%,#4d8ed8_48%,#36cfff_100%)] px-5 py-10 sm:px-8 sm:py-12 lg:px-14 lg:py-14 xl:px-[72px] xl:py-[54px]">
+            <div class="grid gap-8 xl:grid-cols-[minmax(0,1.05fr)_minmax(0,1.4fr)] xl:items-center xl:gap-14">
+              <div>
+                <h2 class="max-w-[680px] text-[30px] font-extrabold leading-[1.2] tracking-[-0.04em] text-white sm:text-[38px] lg:text-[48px]">
+                  Подпишитесь и будьте в курсе всех скидок и акций магазинов Великобритании!
+                </h2>
+              </div>
+
+              <form class="grid gap-5 lg:grid-cols-[minmax(0,1fr)_240px] lg:items-end lg:gap-8">
+                <label class="relative block">
+                  <span class="sr-only">Введите ваш email</span>
+                  <svg
+                    class="pointer-events-none absolute left-0 top-1 h-7 w-7 text-white/80"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    aria-hidden="true"
+                  >
+                    <path d="M4 7.5A2.5 2.5 0 0 1 6.5 5h11A2.5 2.5 0 0 1 20 7.5v9a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 16.5v-9Z" />
+                    <path d="m5 8 7 5 7-5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <input
+                    type="email"
+                    placeholder="Введите ваш email"
+                    class="h-12 w-full border-b border-white/70 bg-transparent pl-12 text-lg text-white outline-none placeholder:text-white/80 sm:h-14 sm:text-xl"
+                  />
+                </label>
+
+                <button
+                  type="submit"
+                  class="inline-flex min-h-[64px] w-full items-center justify-center rounded-full bg-[#02cd7d] px-8 text-lg font-bold text-white transition hover:bg-[#00ba71] sm:min-h-[68px] sm:text-xl"
+                >
+                  Подписаться
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="px-4 pb-10 sm:px-6 sm:pb-12 lg:px-8 lg:pb-14">
+      <div class="mx-auto max-w-[1400px]">
+        <div class="grid gap-10 pb-10 sm:grid-cols-2 lg:grid-cols-[280px_repeat(3,minmax(0,1fr))] lg:gap-12 xl:gap-16 xl:pb-12">
+          <div class="text-center sm:text-left">
+            <a href="#" class="inline-flex" aria-label="OkeyPost">
+              <img src="./img/logo.svg" alt="OkeyPost" class="h-12 w-auto sm:h-14" />
+            </a>
+
+            <div class="mt-8 flex flex-wrap items-center justify-center gap-3 sm:justify-start">
+              <a
+                href="#"
+                aria-label="WhatsApp"
+                class="flex h-14 w-14 items-center justify-center rounded-full border border-[#02cd7d] transition hover:bg-[#02cd7d]/5"
+              >
+                <img src="./img/votsap.svg" alt="" class="h-7 w-7" />
+              </a>
+              <a
+                href="#"
+                aria-label="Viber"
+                class="flex h-14 w-14 items-center justify-center rounded-full border border-[#7b5cff] transition hover:bg-[#7b5cff]/5"
+              >
+                <img src="./img/viber.svg" alt="" class="h-7 w-7" />
+              </a>
+              <a
+                href="#"
+                aria-label="Online chat"
+                class="flex h-14 w-14 items-center justify-center rounded-full border border-[#36cfff] transition hover:bg-[#36cfff]/5"
+              >
+                <img src="./img/OnlineChat.svg" alt="" class="h-7 w-7" />
+              </a>
+            </div>
+          </div>
+
+          <div class="text-center sm:text-left">
+            <h3 class="text-[22px] font-extrabold leading-tight text-slate-900">О компании</h3>
+            <ul class="mt-6 space-y-4 text-lg leading-[1.5] text-slate-500">
+              <li><a href="#" class="transition hover:text-[#02cd7d]">Услуги</a></li>
+              <li><a href="#" class="transition hover:text-[#02cd7d]">Цены</a></li>
+              <li><a href="#" class="transition hover:text-[#02cd7d]">Отзывы</a></li>
+              <li><a href="#" class="transition hover:text-[#02cd7d]">Контакты</a></li>
+              <li><a href="#" class="transition hover:text-[#02cd7d]">Вакансии</a></li>
+              <li><a href="#" class="transition hover:text-[#02cd7d]">Соглашение о персональных данных</a></li>
+              <li><a href="#" class="transition hover:text-[#02cd7d]">Условия использования</a></li>
+            </ul>
+          </div>
+
+          <div class="text-center sm:text-left">
+            <h3 class="text-[22px] font-extrabold leading-tight text-slate-900">Полезное</h3>
+            <ul class="mt-6 space-y-4 text-lg leading-[1.5] text-slate-500">
+              <li><a href="#" class="transition hover:text-[#02cd7d]">Как работает наш сервис</a></li>
+              <li><a href="#" class="transition hover:text-[#02cd7d]">Как покупать с оператором</a></li>
+              <li><a href="#" class="transition hover:text-[#02cd7d]">Ответы на частые вопросы</a></li>
+              <li><a href="#" class="transition hover:text-[#02cd7d]">Популярные магазины</a></li>
+              <li><a href="#" class="transition hover:text-[#02cd7d]">Черный список магазинов</a></li>
+              <li><a href="#" class="transition hover:text-[#02cd7d]">Актуальные распродажи</a></li>
+            </ul>
+          </div>
+
+          <div class="text-center sm:text-left">
+            <h3 class="text-[22px] font-extrabold leading-tight text-slate-900">Спецпроекты</h3>
+            <ul class="mt-6 space-y-4 text-lg leading-[1.5] text-slate-500">
+              <li><a href="#" class="transition hover:text-[#02cd7d]">50% на первую доставку</a></li>
+              <li><a href="#" class="transition hover:text-[#02cd7d]">Скидки для постоянных клиентов</a></li>
+              <li><a href="#" class="transition hover:text-[#02cd7d]">Реферальная программа</a></li>
+              <li><a href="#" class="transition hover:text-[#02cd7d]">Кэшбек Mr. Rebates и Rakuten</a></li>
+              <li><a href="#" class="transition hover:text-[#02cd7d]">Stop Fraud</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-slate-200 pt-6 text-center text-sm text-slate-500 sm:pt-8 sm:text-base">
+          &copy; 2021 Okeypost . Все права защищены.
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const menuButton = document.getElementById("menuButton");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const menuOpenIcon = document.getElementById("menuOpenIcon");
+      const menuCloseIcon = document.getElementById("menuCloseIcon");
+
+      const toggleMenu = () => {
+        const isOpen = !mobileMenu.classList.contains("hidden");
+
+        mobileMenu.classList.toggle("hidden", isOpen);
+        menuOpenIcon.classList.toggle("hidden", !isOpen);
+        menuCloseIcon.classList.toggle("hidden", isOpen);
+        menuButton.setAttribute("aria-expanded", String(!isOpen));
+        menuButton.setAttribute("aria-label", isOpen ? "Открыть меню" : "Закрыть меню");
+      };
+
+      menuButton.addEventListener("click", toggleMenu);
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 1280) {
+          mobileMenu.classList.add("hidden");
+          menuOpenIcon.classList.remove("hidden");
+          menuCloseIcon.classList.add("hidden");
+          menuButton.setAttribute("aria-expanded", "false");
+          menuButton.setAttribute("aria-label", "Открыть меню");
+        }
+      });
+    </script>
+  </body>
+</html>
