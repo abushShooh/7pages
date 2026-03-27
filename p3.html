@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OkeyPost - Распродажи</title>
+    <link rel="stylesheet" href="./styles/output.css" />
+  </head>
+  <body class="min-h-screen bg-white font-sans text-slate-900 antialiased">
+    <main class="overflow-x-hidden">
+      <section class="relative overflow-hidden bg-white py-3 sm:py-4">
+        <div class="relative w-full px-4 sm:px-6 lg:px-8">
+          <header class="rounded-[24px] bg-white px-4 backdrop-blur-sm [box-shadow:0_12px_32px_rgba(15,23,42,0.08)] sm:px-5 lg:px-7">
+            <div class="flex min-h-[74px] items-center justify-between gap-4">
+              <a href="./index.html" class="shrink-0" aria-label="OkeyPost">
+                <img src="./img/logo.svg" alt="OkeyPost" class="h-8 w-auto sm:h-10" />
+              </a>
+
+              <nav class="hidden items-center gap-6 xl:flex">
+                <a href="./p2.html" class="text-sm font-semibold text-slate-900 transition hover:text-emerald-500">Как покупать</a>
+                <a href="./p3.html" class="text-sm font-semibold text-[#02cd7d] transition hover:text-emerald-500">Распродажи</a>
+                <a href="#" class="text-sm font-semibold text-slate-900 transition hover:text-emerald-500">Цены</a>
+                <a href="#" class="text-sm font-semibold text-slate-900 transition hover:text-emerald-500">Помощь</a>
+                <a href="#" class="text-sm font-semibold text-slate-900 transition hover:text-emerald-500">Бонусы</a>
+                <a href="#" class="text-sm font-semibold text-slate-900 transition hover:text-emerald-500">Блог</a>
+                <a href="#" class="text-sm font-semibold text-slate-900 transition hover:text-emerald-500">Магазины</a>
+              </nav>
+
+              <div class="hidden items-center gap-4 lg:flex">
+                <a href="#" class="inline-flex items-center gap-2.5 text-sm font-semibold text-slate-900 transition hover:text-emerald-500">
+                  <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                    <path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Z" />
+                    <path d="M4 20a8 8 0 0 1 16 0" stroke-linecap="round" />
+                  </svg>
+                  <span>Вход</span>
+                </a>
+
+                <a href="#" class="inline-flex items-center justify-center rounded-full bg-[#00d46a] px-5 py-2.5 text-[13px] font-bold text-white transition hover:bg-[#00bf60] focus:outline-none focus:ring-4 focus:ring-emerald-200">
+                  Связаться с нами
+                </a>
+              </div>
+
+              <button
+                id="menuButton"
+                type="button"
+                class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-slate-200 text-slate-900 transition hover:border-emerald-500 hover:text-emerald-500 xl:hidden"
+                aria-expanded="false"
+                aria-controls="mobileMenu"
+                aria-label="Открыть меню"
+              >
+                <svg id="menuOpenIcon" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round" />
+                </svg>
+                <svg id="menuCloseIcon" class="hidden h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M6 6 18 18M18 6 6 18" stroke-linecap="round" />
+                </svg>
+              </button>
+            </div>
+
+            <div id="mobileMenu" class="hidden border-t border-slate-200 py-5 xl:hidden">
+              <nav class="grid gap-3 md:grid-cols-2">
+                <a href="./p2.html" class="rounded-2xl border border-slate-200/80 px-4 py-3 text-sm font-semibold text-slate-900 transition hover:border-emerald-400 hover:text-emerald-500">Как покупать</a>
+                <a href="./p3.html" class="rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm font-semibold text-[#02cd7d] transition hover:border-emerald-400 hover:text-emerald-500">Распродажи</a>
+                <a href="#" class="rounded-2xl border border-slate-200/80 px-4 py-3 text-sm font-semibold text-slate-900 transition hover:border-emerald-400 hover:text-emerald-500">Цены</a>
+                <a href="#" class="rounded-2xl border border-slate-200/80 px-4 py-3 text-sm font-semibold text-slate-900 transition hover:border-emerald-400 hover:text-emerald-500">Помощь</a>
+                <a href="#" class="rounded-2xl border border-slate-200/80 px-4 py-3 text-sm font-semibold text-slate-900 transition hover:border-emerald-400 hover:text-emerald-500">Бонусы</a>
+                <a href="#" class="rounded-2xl border border-slate-200/80 px-4 py-3 text-sm font-semibold text-slate-900 transition hover:border-emerald-400 hover:text-emerald-500">Блог</a>
+                <a href="#" class="rounded-2xl border border-slate-200/80 px-4 py-3 text-sm font-semibold text-slate-900 transition hover:border-emerald-400 hover:text-emerald-500 md:col-span-2">Магазины</a>
+              </nav>
+
+              <div class="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                <a href="#" class="inline-flex items-center justify-center gap-3 rounded-full border border-slate-200 px-5 py-3 text-sm font-semibold text-slate-900 transition hover:border-emerald-400 hover:text-emerald-500">
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                    <path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Z" />
+                    <path d="M4 20a8 8 0 0 1 16 0" stroke-linecap="round" />
+                  </svg>
+                  <span>Вход</span>
+                </a>
+
+                <a href="#" class="inline-flex w-full items-center justify-center rounded-full bg-[#00d46a] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#00bf60] focus:outline-none focus:ring-4 focus:ring-emerald-200 sm:w-auto">
+                  Связаться с нами
+                </a>
+              </div>
+            </div>
+          </header>
+        </div>
+      </section>
+
+      <section class="mt-3 px-4 pb-10 sm:mt-5 sm:px-6 sm:pb-12 lg:px-8 lg:pb-14">
+        <div class="relative overflow-hidden rounded-[28px] bg-[linear-gradient(135deg,#6d5df6_0%,#517de6_48%,#37c1f1_100%)] [box-shadow:0_24px_64px_rgba(56,95,193,0.22)]">
+          <div aria-hidden="true" class="absolute inset-0">
+            <div class="absolute left-[-8%] top-[-12%] h-40 w-40 rounded-full bg-white/10 blur-3xl sm:h-56 sm:w-56"></div>
+            <div class="absolute bottom-[-18%] left-[18%] h-48 w-48 rounded-full bg-fuchsia-300/15 blur-3xl sm:h-72 sm:w-72"></div>
+            <div class="absolute right-[-8%] top-[10%] h-44 w-44 rounded-full bg-white/12 blur-3xl sm:h-64 sm:w-64"></div>
+          </div>
+
+          <div class="relative mx-auto max-w-[1240px] px-6 py-9 sm:px-8 sm:py-11 lg:px-12 lg:py-14 xl:min-h-[290px] xl:px-16 xl:py-16">
+            <div class="max-w-[620px]">
+              <div class="flex flex-wrap items-center gap-2 text-sm text-white/75">
+                <a href="./index.html" class="transition hover:text-white">Главная</a>
+                <span>/</span>
+                <span>Распродажи</span>
+              </div>
+
+              <h1 class="mt-5 max-w-[620px] text-[30px] font-extrabold leading-[1.08] tracking-[-0.04em] text-white sm:text-[38px] lg:text-[46px] xl:text-[52px]">
+                Распродажи
+              </h1>
+
+              <p class="mt-3 text-lg font-semibold text-white/90 sm:text-xl">
+                ранний доступ к распродажам в магазинах
+              </p>
+
+              <div class="mt-8">
+                <a
+                  href="#"
+                  class="inline-flex min-h-[56px] items-center justify-center rounded-full bg-[#02cd7d] px-8 text-base font-bold text-white transition hover:bg-[#00ba71] sm:min-h-[60px] sm:px-10"
+                >
+                  Получить адрес в UK
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const menuButton = document.getElementById("menuButton");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const menuOpenIcon = document.getElementById("menuOpenIcon");
+      const menuCloseIcon = document.getElementById("menuCloseIcon");
+
+      const toggleMenu = () => {
+        const isOpen = !mobileMenu.classList.contains("hidden");
+
+        mobileMenu.classList.toggle("hidden", isOpen);
+        menuOpenIcon.classList.toggle("hidden", !isOpen);
+        menuCloseIcon.classList.toggle("hidden", isOpen);
+        menuButton.setAttribute("aria-expanded", String(!isOpen));
+        menuButton.setAttribute("aria-label", isOpen ? "Открыть меню" : "Закрыть меню");
+      };
+
+      menuButton.addEventListener("click", toggleMenu);
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 1280) {
+          mobileMenu.classList.add("hidden");
+          menuOpenIcon.classList.remove("hidden");
+          menuCloseIcon.classList.add("hidden");
+          menuButton.setAttribute("aria-expanded", "false");
+          menuButton.setAttribute("aria-label", "Открыть меню");
+        }
+      });
+    </script>
+  </body>
+</html>
