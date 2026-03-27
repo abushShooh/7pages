@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OkeyPost - Магазины</title>
+    <link rel="stylesheet" href="./styles/output.css" />
+  </head>
+  <body class="min-h-screen bg-white font-sans text-slate-900 antialiased">
+    <main class="overflow-x-hidden">
+      <section class="relative overflow-hidden bg-white py-3 sm:py-4">
+        <div class="relative w-full px-4 sm:px-6 lg:px-8">
+          <header class="rounded-[24px] bg-white px-4 backdrop-blur-sm [box-shadow:0_12px_32px_rgba(15,23,42,0.08)] sm:px-5 lg:px-7">
+            <div class="flex min-h-[74px] items-center justify-between gap-4">
+              <a href="./index.html" class="shrink-0" aria-label="OkeyPost">
+                <img src="./img/logo.svg" alt="OkeyPost" class="h-8 w-auto sm:h-10" />
+              </a>
+
+              <nav class="hidden items-center gap-6 xl:flex">
+                <a href="./p2.html" class="text-sm font-semibold text-slate-900 transition hover:text-emerald-500">Как покупать</a>
+                <a href="./p3.html" class="text-sm font-semibold text-slate-900 transition hover:text-emerald-500">Распродажи</a>
+                <a href="./p4.html" class="text-sm font-semibold text-slate-900 transition hover:text-emerald-500">Цены</a>
+                <a href="./p5.html" class="text-sm font-semibold text-slate-900 transition hover:text-emerald-500">Помощь</a>
+                <a href="./p6.html" class="text-sm font-semibold text-slate-900 transition hover:text-emerald-500">Бонусы</a>
+                <a href="./p7.html" class="text-sm font-semibold text-slate-900 transition hover:text-emerald-500">Блог</a>
+                <a href="./p8.html" class="text-sm font-semibold text-[#02cd7d] transition hover:text-emerald-500">Магазины</a>
+              </nav>
+
+              <div class="hidden items-center gap-4 lg:flex">
+                <a href="#" class="inline-flex items-center gap-2.5 text-sm font-semibold text-slate-900 transition hover:text-emerald-500">
+                  <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                    <path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Z" />
+                    <path d="M4 20a8 8 0 0 1 16 0" stroke-linecap="round" />
+                  </svg>
+                  <span>Вход</span>
+                </a>
+
+                <a href="#" class="inline-flex items-center justify-center rounded-full bg-[#00d46a] px-5 py-2.5 text-[13px] font-bold text-white transition hover:bg-[#00bf60] focus:outline-none focus:ring-4 focus:ring-emerald-200">
+                  Связаться с нами
+                </a>
+              </div>
+
+              <button
+                id="menuButton"
+                type="button"
+                class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-slate-200 text-slate-900 transition hover:border-emerald-500 hover:text-emerald-500 xl:hidden"
+                aria-expanded="false"
+                aria-controls="mobileMenu"
+                aria-label="Открыть меню"
+              >
+                <svg id="menuOpenIcon" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round" />
+                </svg>
+                <svg id="menuCloseIcon" class="hidden h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M6 6 18 18M18 6 6 18" stroke-linecap="round" />
+                </svg>
+              </button>
+            </div>
+
+            <div id="mobileMenu" class="hidden border-t border-slate-200 py-5 xl:hidden">
+              <nav class="grid gap-3 md:grid-cols-2">
+                <a href="./p2.html" class="rounded-2xl border border-slate-200/80 px-4 py-3 text-sm font-semibold text-slate-900 transition hover:border-emerald-400 hover:text-emerald-500">Как покупать</a>
+                <a href="./p3.html" class="rounded-2xl border border-slate-200/80 px-4 py-3 text-sm font-semibold text-slate-900 transition hover:border-emerald-400 hover:text-emerald-500">Распродажи</a>
+                <a href="./p4.html" class="rounded-2xl border border-slate-200/80 px-4 py-3 text-sm font-semibold text-slate-900 transition hover:border-emerald-400 hover:text-emerald-500">Цены</a>
+                <a href="./p5.html" class="rounded-2xl border border-slate-200/80 px-4 py-3 text-sm font-semibold text-slate-900 transition hover:border-emerald-400 hover:text-emerald-500">Помощь</a>
+                <a href="./p6.html" class="rounded-2xl border border-slate-200/80 px-4 py-3 text-sm font-semibold text-slate-900 transition hover:border-emerald-400 hover:text-emerald-500">Бонусы</a>
+                <a href="./p7.html" class="rounded-2xl border border-slate-200/80 px-4 py-3 text-sm font-semibold text-slate-900 transition hover:border-emerald-400 hover:text-emerald-500">Блог</a>
+                <a href="./p8.html" class="rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm font-semibold text-[#02cd7d] transition hover:border-emerald-400 hover:text-emerald-500 md:col-span-2">Магазины</a>
+              </nav>
+
+              <div class="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                <a href="#" class="inline-flex items-center justify-center gap-3 rounded-full border border-slate-200 px-5 py-3 text-sm font-semibold text-slate-900 transition hover:border-emerald-400 hover:text-emerald-500">
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                    <path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Z" />
+                    <path d="M4 20a8 8 0 0 1 16 0" stroke-linecap="round" />
+                  </svg>
+                  <span>Вход</span>
+                </a>
+
+                <a href="#" class="inline-flex w-full items-center justify-center rounded-full bg-[#00d46a] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#00bf60] focus:outline-none focus:ring-4 focus:ring-emerald-200 sm:w-auto">
+                  Связаться с нами
+                </a>
+              </div>
+            </div>
+          </header>
+        </div>
+      </section>
+
+      <section class="mt-3 px-4 pb-10 sm:mt-5 sm:px-6 sm:pb-12 lg:px-8 lg:pb-14">
+        <div class="relative overflow-hidden rounded-[28px] bg-[linear-gradient(135deg,#6d5df6_0%,#517de6_48%,#37c1f1_100%)] [box-shadow:0_24px_64px_rgba(56,95,193,0.22)]">
+          <div aria-hidden="true" class="absolute inset-0">
+            <div class="absolute left-[-8%] top-[-12%] h-40 w-40 rounded-full bg-white/10 blur-3xl sm:h-56 sm:w-56"></div>
+            <div class="absolute bottom-[-18%] left-[18%] h-48 w-48 rounded-full bg-fuchsia-300/15 blur-3xl sm:h-72 sm:w-72"></div>
+            <div class="absolute right-[-8%] top-[10%] h-44 w-44 rounded-full bg-white/12 blur-3xl sm:h-64 sm:w-64"></div>
+          </div>
+
+          <div class="relative mx-auto max-w-[1240px] px-6 py-9 sm:px-8 sm:py-11 lg:px-12 lg:py-14 xl:min-h-[230px] xl:px-16 xl:py-16">
+            <div class="max-w-[760px]">
+              <div class="flex flex-wrap items-center gap-2 text-sm text-white/75">
+                <a href="./index.html" class="transition hover:text-white">Главная</a>
+                <span>/</span>
+                <span>Популярные магазины</span>
+              </div>
+
+              <h1 class="mt-6 max-w-[760px] text-[28px] font-extrabold leading-[1.12] tracking-[-0.04em] text-white sm:text-[36px] lg:text-[44px] xl:text-[52px]">
+                Популярные магазины
+              </h1>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-4 pb-14 sm:px-6 sm:pb-16 lg:px-8 lg:pb-20">
+        <div class="mx-auto max-w-[1240px]">
+          <div class="mx-auto max-w-[1120px]">
+            <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+              <article class="flex min-h-[178px] flex-col rounded-[24px] bg-white px-5 py-5 [box-shadow:0_18px_56px_rgba(15,23,42,0.05)]">
+                <div class="flex flex-1 items-center justify-center">
+                  <div class="text-center text-[34px] font-light tracking-[0.28em] text-[#39b8df]">PRIMARK</div>
+                </div>
+                <p class="pt-4 text-sm font-semibold text-slate-900">Primark (форма заказа)</p>
+              </article>
+
+              <article class="flex min-h-[178px] flex-col rounded-[24px] bg-white px-5 py-5 [box-shadow:0_18px_56px_rgba(15,23,42,0.05)]">
+                <div class="flex flex-1 items-center justify-center">
+                  <div class="text-[56px] font-black italic tracking-[-0.08em] text-[#e0182d]">H&amp;M</div>
+                </div>
+                <p class="pt-4 text-sm font-semibold text-slate-900">H&amp;M</p>
+              </article>
+
+              <article class="flex min-h-[178px] flex-col rounded-[24px] bg-white px-5 py-5 [box-shadow:0_18px_56px_rgba(15,23,42,0.05)]">
+                <div class="flex flex-1 flex-col items-center justify-center leading-none">
+                  <div class="text-[30px] font-black tracking-[0.08em] text-slate-900">MANGO</div>
+                  <div class="mt-2 text-[18px] font-bold uppercase tracking-[0.18em] text-slate-700">OUTLET</div>
+                </div>
+                <p class="pt-4 text-sm font-semibold text-slate-900">Mangooutlet</p>
+              </article>
+
+              <article class="flex min-h-[178px] flex-col rounded-[24px] bg-white px-5 py-5 [box-shadow:0_18px_56px_rgba(15,23,42,0.05)]">
+                <div class="flex flex-1 items-center justify-center">
+                  <div class="text-[68px] font-light lowercase tracking-[-0.08em] text-slate-900">next</div>
+                </div>
+                <p class="pt-4 text-sm font-semibold text-slate-900">Next</p>
+              </article>
+
+              <article class="flex min-h-[178px] flex-col rounded-[24px] bg-white px-5 py-5 [box-shadow:0_18px_56px_rgba(15,23,42,0.05)]">
+                <div class="flex flex-1 flex-col items-center justify-center leading-none">
+                  <div class="text-[28px] font-black uppercase italic tracking-[-0.04em] text-[#1e66d0]">SPORTS</div>
+                  <div class="mt-2 text-[24px] font-black uppercase italic tracking-[-0.04em] text-[#eb302d]">DIRECT.com</div>
+                </div>
+                <p class="pt-4 text-sm font-semibold text-slate-900">Sportdirect</p>
+              </article>
+
+              <article class="flex min-h-[178px] flex-col rounded-[24px] bg-white px-5 py-5 [box-shadow:0_18px_56px_rgba(15,23,42,0.05)]">
+                <div class="flex flex-1 items-center justify-center">
+                  <div class="border-[3px] border-slate-900 px-4 py-2 text-[42px] font-light leading-none tracking-[-0.08em] text-slate-900">F&amp;F</div>
+                </div>
+                <p class="pt-4 text-sm font-semibold text-slate-900">Clothing at Tesco</p>
+              </article>
+
+              <article class="flex min-h-[178px] flex-col rounded-[24px] bg-white px-5 py-5 [box-shadow:0_18px_56px_rgba(15,23,42,0.05)]">
+                <div class="flex flex-1 flex-col items-center justify-center leading-none">
+                  <div class="text-[34px] font-black tracking-[-0.08em] text-[#7bc241]">ASDA</div>
+                  <div class="mt-1 text-[30px] font-medium tracking-[-0.05em] text-slate-800">George.</div>
+                </div>
+                <p class="pt-4 text-sm font-semibold text-slate-900">George at ASDA</p>
+              </article>
+
+              <article class="flex min-h-[178px] flex-col rounded-[24px] bg-white px-5 py-5 [box-shadow:0_18px_56px_rgba(15,23,42,0.05)]">
+                <div class="flex flex-1 items-center justify-center">
+                  <div class="text-[36px] font-semibold italic tracking-[-0.06em] text-[#d6268a]">Accessorize</div>
+                </div>
+                <p class="pt-4 text-sm font-semibold text-slate-900">Accessorize</p>
+              </article>
+
+              <article class="flex min-h-[178px] flex-col rounded-[24px] bg-white px-5 py-5 [box-shadow:0_18px_56px_rgba(15,23,42,0.05)]">
+                <div class="flex flex-1 items-center justify-center">
+                  <div class="text-[52px] font-black lowercase tracking-[-0.08em] text-slate-900">adidas</div>
+                </div>
+                <p class="pt-4 text-sm font-semibold text-slate-900">Adidas UK</p>
+              </article>
+
+              <article class="flex min-h-[178px] flex-col rounded-[24px] bg-white px-5 py-5 [box-shadow:0_18px_56px_rgba(15,23,42,0.05)]">
+                <div class="flex flex-1 flex-col items-center justify-center">
+                  <div class="text-[56px] font-black tracking-[-0.08em] text-slate-900">amazon</div>
+                  <div class="mt-2 h-[6px] w-[110px] rounded-full bg-[#f4a340]"></div>
+                </div>
+                <p class="pt-4 text-sm font-semibold text-slate-900">Amazon</p>
+              </article>
+
+              <article class="flex min-h-[178px] flex-col rounded-[24px] bg-white px-5 py-5 [box-shadow:0_18px_56px_rgba(15,23,42,0.05)]">
+                <div class="flex flex-1 items-center justify-center">
+                  <div class="text-[60px] font-black lowercase tracking-[-0.1em] text-slate-900">asos</div>
+                </div>
+                <p class="pt-4 text-sm font-semibold text-slate-900">ASOS</p>
+              </article>
+
+              <article class="flex min-h-[178px] flex-col rounded-[24px] bg-white px-5 py-5 [box-shadow:0_18px_56px_rgba(15,23,42,0.05)]">
+                <div class="flex flex-1 items-center justify-center">
+                  <div class="text-[54px] font-medium lowercase tracking-[-0.08em] text-slate-900">boohoo</div>
+                </div>
+                <p class="pt-4 text-sm font-semibold text-slate-900">Boohoo</p>
+              </article>
+
+              <article class="flex min-h-[178px] flex-col rounded-[24px] bg-white px-5 py-5 [box-shadow:0_18px_56px_rgba(15,23,42,0.05)]">
+                <div class="flex flex-1 items-center justify-center">
+                  <div class="text-[54px] font-black lowercase tracking-[-0.08em] text-[#7ec616]">crocs</div>
+                </div>
+                <p class="pt-4 text-sm font-semibold text-slate-900">Crocs</p>
+              </article>
+
+              <article class="flex min-h-[178px] flex-col rounded-[24px] bg-white px-5 py-5 [box-shadow:0_18px_56px_rgba(15,23,42,0.05)]">
+                <div class="flex flex-1 items-center justify-center text-[58px] font-black tracking-[-0.08em]">
+                  <span class="text-[#df3b2f]">e</span><span class="text-[#2767d9]">b</span><span class="text-[#f5bd1f]">a</span><span class="text-[#7fbf2f]">y</span>
+                </div>
+                <p class="pt-4 text-sm font-semibold text-slate-900">Ebay</p>
+              </article>
+
+              <article class="flex min-h-[178px] flex-col rounded-[24px] bg-white px-5 py-5 [box-shadow:0_18px_56px_rgba(15,23,42,0.05)]">
+                <div class="flex flex-1 items-center justify-center">
+                  <div class="text-[42px] font-light uppercase tracking-[0.04em] text-[#dd4a43]">MATALAN</div>
+                </div>
+                <p class="pt-4 text-sm font-semibold text-slate-900">Matalan</p>
+              </article>
+
+              <article class="flex min-h-[178px] flex-col rounded-[24px] bg-white px-5 py-5 [box-shadow:0_18px_56px_rgba(15,23,42,0.05)]">
+                <div class="flex flex-1 items-center justify-center">
+                  <div class="text-[40px] font-bold tracking-[-0.06em] text-[#2f5a97]">mothercare</div>
+                </div>
+                <p class="pt-4 text-sm font-semibold text-slate-900">Mothercare</p>
+              </article>
+
+              <article class="flex min-h-[178px] flex-col rounded-[24px] bg-white px-5 py-5 [box-shadow:0_18px_56px_rgba(15,23,42,0.05)]">
+                <div class="flex flex-1 items-center justify-center">
+                  <div class="text-[54px] font-extralight lowercase tracking-[-0.12em] text-slate-900">new look</div>
+                </div>
+                <p class="pt-4 text-sm font-semibold text-slate-900">New Look</p>
+              </article>
+
+              <article class="flex min-h-[178px] flex-col rounded-[24px] bg-white px-5 py-5 [box-shadow:0_18px_56px_rgba(15,23,42,0.05)]">
+                <div class="flex flex-1 items-center justify-center">
+                  <div class="text-[54px] font-black uppercase tracking-[-0.08em] text-slate-900">PUMA</div>
+                </div>
+                <p class="pt-4 text-sm font-semibold text-slate-900">Puma</p>
+              </article>
+
+              <article class="flex min-h-[178px] flex-col rounded-[24px] bg-white px-5 py-5 [box-shadow:0_18px_56px_rgba(15,23,42,0.05)]">
+                <div class="flex flex-1 items-center justify-center">
+                  <div class="text-[36px] font-black tracking-[-0.06em] text-slate-900">Timberland</div>
+                </div>
+                <p class="pt-4 text-sm font-semibold text-slate-900">Timberland</p>
+              </article>
+
+              <article class="flex min-h-[178px] flex-col rounded-[24px] bg-white px-5 py-5 [box-shadow:0_18px_56px_rgba(15,23,42,0.05)]">
+                <div class="flex flex-1 items-center justify-center">
+                  <div class="text-[30px] font-medium lowercase tracking-[-0.06em] text-slate-700">showroomprive<span class="text-slate-400">.com</span></div>
+                </div>
+                <p class="pt-4 text-sm font-semibold text-slate-900">Showroomprive</p>
+              </article>
+
+              <article class="flex min-h-[178px] flex-col rounded-[24px] bg-white px-5 py-5 [box-shadow:0_18px_56px_rgba(15,23,42,0.05)]">
+                <div class="flex flex-1 items-center justify-center">
+                  <div class="text-[42px] font-light tracking-[-0.08em] text-slate-700">BrandAlley</div>
+                </div>
+                <p class="pt-4 text-sm font-semibold text-slate-900">Brand Alley</p>
+              </article>
+
+              <article class="flex min-h-[178px] flex-col rounded-[24px] bg-white px-5 py-5 [box-shadow:0_18px_56px_rgba(15,23,42,0.05)]">
+                <div class="flex flex-1 items-center justify-center">
+                  <div class="text-[50px] font-extralight tracking-[-0.08em] text-slate-700">your <span class="font-light">M</span><span class="text-[#b7c857]">&amp;</span><span class="font-light">S</span></div>
+                </div>
+                <p class="pt-4 text-sm font-semibold text-slate-900">M&amp;S</p>
+              </article>
+
+              <article class="flex min-h-[178px] flex-col rounded-[24px] bg-white px-5 py-5 [box-shadow:0_18px_56px_rgba(15,23,42,0.05)]">
+                <div class="flex flex-1 items-center justify-center">
+                  <div class="text-[50px] font-semibold italic tracking-[-0.08em] text-[#2a6f46]">Clarks</div>
+                </div>
+                <p class="pt-4 text-sm font-semibold text-slate-900">Clarks</p>
+              </article>
+
+              <article class="flex min-h-[178px] flex-col rounded-[24px] bg-white px-5 py-5 [box-shadow:0_18px_56px_rgba(15,23,42,0.05)]">
+                <div class="flex flex-1 items-center justify-center">
+                  <div class="text-[64px] font-black uppercase tracking-[-0.1em] text-slate-900">ZARA</div>
+                </div>
+                <p class="pt-4 text-sm font-semibold text-slate-900">Zara</p>
+              </article>
+
+              <article class="flex min-h-[178px] flex-col rounded-[24px] bg-white px-5 py-5 [box-shadow:0_18px_56px_rgba(15,23,42,0.05)]">
+                <div class="flex flex-1 items-center justify-center">
+                  <div class="text-[54px] font-medium uppercase tracking-[-0.08em] text-slate-900">MANGO</div>
+                </div>
+                <p class="pt-4 text-sm font-semibold text-slate-900">Mango</p>
+              </article>
+
+              <article class="flex min-h-[178px] flex-col rounded-[24px] bg-white px-5 py-5 [box-shadow:0_18px_56px_rgba(15,23,42,0.05)]">
+                <div class="flex flex-1 items-center justify-center">
+                  <div class="text-[52px] font-semibold italic tracking-[-0.08em] text-[#8c3ad5]">Zulily</div>
+                </div>
+                <p class="pt-4 text-sm font-semibold text-slate-900">Zulily</p>
+              </article>
+
+              <article class="flex min-h-[178px] flex-col rounded-[24px] bg-white px-5 py-5 [box-shadow:0_18px_56px_rgba(15,23,42,0.05)]">
+                <div class="flex flex-1 flex-col items-center justify-center">
+                  <div class="text-[30px] font-medium tracking-[-0.06em] text-slate-700">♡ Panache Kids</div>
+                </div>
+                <p class="pt-4 text-sm font-semibold text-slate-900">Panachekids</p>
+              </article>
+
+              <article class="flex min-h-[178px] flex-col rounded-[24px] bg-white px-5 py-5 [box-shadow:0_18px_56px_rgba(15,23,42,0.05)]">
+                <div class="flex flex-1 flex-col items-center justify-center leading-none">
+                  <div class="text-[42px] font-semibold tracking-[-0.06em] text-[#1ba7d7]">Betterware</div>
+                  <div class="mt-2 text-[12px] font-medium uppercase tracking-[0.16em] text-slate-400">Hogar en armonia</div>
+                </div>
+                <p class="pt-4 text-sm font-semibold text-slate-900">Betterware</p>
+              </article>
+
+              <article class="flex min-h-[178px] flex-col rounded-[24px] bg-white px-5 py-5 [box-shadow:0_18px_56px_rgba(15,23,42,0.05)]">
+                <div class="flex flex-1 flex-col items-center justify-center leading-none">
+                  <div class="text-[46px] font-serif font-bold uppercase tracking-[0.1em] text-slate-900">TUCCI</div>
+                  <div class="mt-2 text-[12px] font-semibold uppercase tracking-[0.24em] text-slate-500">Designer clothing</div>
+                </div>
+                <p class="pt-4 text-sm font-semibold text-slate-900">Tucci Store</p>
+              </article>
+
+              <article class="flex min-h-[178px] flex-col rounded-[24px] bg-white px-5 py-5 [box-shadow:0_18px_56px_rgba(15,23,42,0.05)]">
+                <div class="flex flex-1 flex-col items-center justify-center leading-none">
+                  <div class="text-[12px] font-semibold uppercase tracking-[0.36em] text-slate-500">mini</div>
+                  <div class="mt-2 text-[42px] font-light uppercase tracking-[0.16em] text-slate-700">MODE</div>
+                </div>
+                <p class="pt-4 text-sm font-semibold text-slate-900">Mini Mode</p>
+              </article>
+            </div>
+
+            <div class="mt-12 flex items-center justify-center gap-3 sm:mt-14">
+              <button type="button" class="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 text-slate-300 transition hover:border-[#02cd7d] hover:text-[#02cd7d]" aria-label="Предыдущая страница">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="m15 6-6 6 6 6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <button type="button" class="flex h-11 w-11 items-center justify-center rounded-full border border-emerald-200 bg-emerald-50 text-sm font-bold text-[#02cd7d]">1</button>
+              <button type="button" class="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 text-sm font-bold text-slate-400 transition hover:border-[#02cd7d] hover:text-[#02cd7d]">2</button>
+              <span class="text-sm font-semibold text-slate-300">...</span>
+              <button type="button" class="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 text-sm font-bold text-slate-400 transition hover:border-[#02cd7d] hover:text-[#02cd7d]">23</button>
+              <button type="button" class="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 text-sm font-bold text-slate-400 transition hover:border-[#02cd7d] hover:text-[#02cd7d]">24</button>
+              <button type="button" class="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 text-slate-300 transition hover:border-[#02cd7d] hover:text-[#02cd7d]" aria-label="Следующая страница">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="m9 6 6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-4 pb-12 sm:px-6 sm:pb-14 lg:px-8 xl:pb-16">
+        <div class="mx-auto max-w-[1240px] overflow-hidden rounded-[32px] bg-[linear-gradient(135deg,#6d58c9_0%,#35c9ff_100%)] text-white shadow-[0_24px_80px_rgba(86,104,189,0.18)]">
+          <div class="px-6 py-10 sm:px-10 md:px-12 md:py-12 lg:px-16 lg:py-14 xl:px-20">
+            <div class="grid items-center gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-10">
+              <h2 class="max-w-[640px] text-center text-[28px] font-extrabold leading-[1.2] sm:text-[34px] lg:text-left lg:text-[42px]">
+                Остались вопросы? Спросите нас в соцсетях!
+              </h2>
+
+              <div class="flex flex-wrap items-center justify-center gap-4 lg:justify-end">
+                <a
+                  href="#"
+                  aria-label="WhatsApp"
+                  class="flex h-14 w-14 items-center justify-center rounded-full border border-white/65 transition hover:bg-white/10"
+                >
+                  <img src="./img/votsap.svg" alt="" class="h-7 w-7" />
+                </a>
+                <a
+                  href="#"
+                  aria-label="Viber"
+                  class="flex h-14 w-14 items-center justify-center rounded-full border border-white/65 transition hover:bg-white/10"
+                >
+                  <img src="./img/viber.svg" alt="" class="h-7 w-7" />
+                </a>
+                <a
+                  href="#"
+                  aria-label="Online chat"
+                  class="flex h-14 w-14 items-center justify-center rounded-full border border-white/65 transition hover:bg-white/10"
+                >
+                  <img src="./img/OnlineChat.svg" alt="" class="h-7 w-7 brightness-[10]" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="px-4 pb-8 sm:px-6 sm:pb-10 lg:px-8 lg:pb-12">
+      <div class="mx-auto max-w-[1240px]">
+        <div class="grid gap-8 pb-8 sm:grid-cols-2 lg:grid-cols-[240px_repeat(3,minmax(0,1fr))] lg:gap-10 xl:gap-12 xl:pb-10">
+          <div class="text-center sm:text-left">
+            <a href="./index.html" class="inline-flex" aria-label="OkeyPost">
+              <img src="./img/logo.svg" alt="OkeyPost" class="h-10 w-auto sm:h-12" />
+            </a>
+
+            <div class="mt-8 flex flex-wrap items-center justify-center gap-3 sm:justify-start">
+              <a
+                href="#"
+                aria-label="WhatsApp"
+                class="flex h-12 w-12 items-center justify-center rounded-full border border-[#02cd7d] transition hover:bg-[#02cd7d]/5"
+              >
+                <img src="./img/votsap.svg" alt="" class="h-6 w-6" />
+              </a>
+              <a
+                href="#"
+                aria-label="Viber"
+                class="flex h-12 w-12 items-center justify-center rounded-full border border-[#7b5cff] transition hover:bg-[#7b5cff]/5"
+              >
+                <img src="./img/viber.svg" alt="" class="h-6 w-6" />
+              </a>
+              <a
+                href="#"
+                aria-label="Online chat"
+                class="flex h-12 w-12 items-center justify-center rounded-full border border-[#36cfff] transition hover:bg-[#36cfff]/5"
+              >
+                <img src="./img/OnlineChat.svg" alt="" class="h-6 w-6" />
+              </a>
+            </div>
+          </div>
+
+          <div class="text-center sm:text-left">
+            <h3 class="text-lg font-extrabold leading-tight text-slate-900">О компании</h3>
+            <ul class="mt-5 space-y-3 text-base leading-[1.5] text-slate-500">
+              <li><a href="#" class="transition hover:text-[#02cd7d]">Услуги</a></li>
+              <li><a href="./p4.html" class="transition hover:text-[#02cd7d]">Цены</a></li>
+              <li><a href="#" class="transition hover:text-[#02cd7d]">Отзывы</a></li>
+              <li><a href="#" class="transition hover:text-[#02cd7d]">Контакты</a></li>
+              <li><a href="#" class="transition hover:text-[#02cd7d]">Вакансии</a></li>
+              <li><a href="#" class="transition hover:text-[#02cd7d]">Соглашение о персональных данных</a></li>
+              <li><a href="#" class="transition hover:text-[#02cd7d]">Условия использования</a></li>
+            </ul>
+          </div>
+
+          <div class="text-center sm:text-left">
+            <h3 class="text-lg font-extrabold leading-tight text-slate-900">Полезное</h3>
+            <ul class="mt-5 space-y-3 text-base leading-[1.5] text-slate-500">
+              <li><a href="./p2.html" class="transition hover:text-[#02cd7d]">Как работает наш сервис</a></li>
+              <li><a href="./p2.html" class="transition hover:text-[#02cd7d]">Как покупать с оператором</a></li>
+              <li><a href="./p5.html" class="transition hover:text-[#02cd7d]">Ответы на частые вопросы</a></li>
+              <li><a href="./p8.html" class="transition hover:text-[#02cd7d]">Популярные магазины</a></li>
+              <li><a href="#" class="transition hover:text-[#02cd7d]">Черный список магазинов</a></li>
+              <li><a href="./p3.html" class="transition hover:text-[#02cd7d]">Актуальные распродажи</a></li>
+            </ul>
+          </div>
+
+          <div class="text-center sm:text-left">
+            <h3 class="text-lg font-extrabold leading-tight text-slate-900">Спецпроекты</h3>
+            <ul class="mt-5 space-y-3 text-base leading-[1.5] text-slate-500">
+              <li><a href="#" class="transition hover:text-[#02cd7d]">50% на первую доставку</a></li>
+              <li><a href="#" class="transition hover:text-[#02cd7d]">Скидки для постоянных клиентов</a></li>
+              <li><a href="./p6.html" class="transition hover:text-[#02cd7d]">Реферальная программа</a></li>
+              <li><a href="#" class="transition hover:text-[#02cd7d]">Кэшбек Mr. Rebates и Rakuten</a></li>
+              <li><a href="#" class="transition hover:text-[#02cd7d]">Stop Fraud</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-slate-200 pt-6 text-center text-sm text-slate-500 sm:pt-8 sm:text-base">
+          &copy; 2021 Okeypost . Все права защищены.
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const menuButton = document.getElementById("menuButton");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const menuOpenIcon = document.getElementById("menuOpenIcon");
+      const menuCloseIcon = document.getElementById("menuCloseIcon");
+
+      const toggleMenu = () => {
+        const isOpen = !mobileMenu.classList.contains("hidden");
+
+        mobileMenu.classList.toggle("hidden", isOpen);
+        menuOpenIcon.classList.toggle("hidden", !isOpen);
+        menuCloseIcon.classList.toggle("hidden", isOpen);
+        menuButton.setAttribute("aria-expanded", String(!isOpen));
+        menuButton.setAttribute("aria-label", isOpen ? "Закрыть меню" : "Открыть меню");
+      };
+
+      menuButton.addEventListener("click", toggleMenu);
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 1280) {
+          mobileMenu.classList.add("hidden");
+          menuOpenIcon.classList.remove("hidden");
+          menuCloseIcon.classList.add("hidden");
+          menuButton.setAttribute("aria-expanded", "false");
+          menuButton.setAttribute("aria-label", "Открыть меню");
+        }
+      });
+    </script>
+  </body>
+</html>
