@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OkeyPost - Помощь</title>
+    <link rel="stylesheet" href="./styles/output.css" />
+  </head>
+  <body class="min-h-screen bg-white font-sans text-slate-900 antialiased">
+    <main class="overflow-x-hidden">
+      <section class="relative overflow-hidden bg-white py-3 sm:py-4">
+        <div class="relative w-full px-4 sm:px-6 lg:px-8">
+          <header class="rounded-[24px] bg-white px-4 backdrop-blur-sm [box-shadow:0_12px_32px_rgba(15,23,42,0.08)] sm:px-5 lg:px-7">
+            <div class="flex min-h-[74px] items-center justify-between gap-4">
+              <a href="./index.html" class="shrink-0" aria-label="OkeyPost">
+                <img src="./img/logo.svg" alt="OkeyPost" class="h-8 w-auto sm:h-10" />
+              </a>
+
+              <nav class="hidden items-center gap-6 xl:flex">
+                <a href="./p2.html" class="text-sm font-semibold text-slate-900 transition hover:text-emerald-500">Как покупать</a>
+                <a href="./p3.html" class="text-sm font-semibold text-slate-900 transition hover:text-emerald-500">Распродажи</a>
+                <a href="./p4.html" class="text-sm font-semibold text-slate-900 transition hover:text-emerald-500">Цены</a>
+                <a href="./p5.html" class="text-sm font-semibold text-[#02cd7d] transition hover:text-emerald-500">Помощь</a>
+                <a href="#" class="text-sm font-semibold text-slate-900 transition hover:text-emerald-500">Бонусы</a>
+                <a href="#" class="text-sm font-semibold text-slate-900 transition hover:text-emerald-500">Блог</a>
+                <a href="#" class="text-sm font-semibold text-slate-900 transition hover:text-emerald-500">Магазины</a>
+              </nav>
+
+              <div class="hidden items-center gap-4 lg:flex">
+                <a href="#" class="inline-flex items-center gap-2.5 text-sm font-semibold text-slate-900 transition hover:text-emerald-500">
+                  <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                    <path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Z" />
+                    <path d="M4 20a8 8 0 0 1 16 0" stroke-linecap="round" />
+                  </svg>
+                  <span>Вход</span>
+                </a>
+
+                <a href="#" class="inline-flex items-center justify-center rounded-full bg-[#00d46a] px-5 py-2.5 text-[13px] font-bold text-white transition hover:bg-[#00bf60] focus:outline-none focus:ring-4 focus:ring-emerald-200">
+                  Связаться с нами
+                </a>
+              </div>
+
+              <button
+                id="menuButton"
+                type="button"
+                class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-slate-200 text-slate-900 transition hover:border-emerald-500 hover:text-emerald-500 xl:hidden"
+                aria-expanded="false"
+                aria-controls="mobileMenu"
+                aria-label="Открыть меню"
+              >
+                <svg id="menuOpenIcon" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round" />
+                </svg>
+                <svg id="menuCloseIcon" class="hidden h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M6 6 18 18M18 6 6 18" stroke-linecap="round" />
+                </svg>
+              </button>
+            </div>
+
+            <div id="mobileMenu" class="hidden border-t border-slate-200 py-5 xl:hidden">
+              <nav class="grid gap-3 md:grid-cols-2">
+                <a href="./p2.html" class="rounded-2xl border border-slate-200/80 px-4 py-3 text-sm font-semibold text-slate-900 transition hover:border-emerald-400 hover:text-emerald-500">Как покупать</a>
+                <a href="./p3.html" class="rounded-2xl border border-slate-200/80 px-4 py-3 text-sm font-semibold text-slate-900 transition hover:border-emerald-400 hover:text-emerald-500">Распродажи</a>
+                <a href="./p4.html" class="rounded-2xl border border-slate-200/80 px-4 py-3 text-sm font-semibold text-slate-900 transition hover:border-emerald-400 hover:text-emerald-500">Цены</a>
+                <a href="./p5.html" class="rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm font-semibold text-[#02cd7d] transition hover:border-emerald-400 hover:text-emerald-500">Помощь</a>
+                <a href="#" class="rounded-2xl border border-slate-200/80 px-4 py-3 text-sm font-semibold text-slate-900 transition hover:border-emerald-400 hover:text-emerald-500">Бонусы</a>
+                <a href="#" class="rounded-2xl border border-slate-200/80 px-4 py-3 text-sm font-semibold text-slate-900 transition hover:border-emerald-400 hover:text-emerald-500">Блог</a>
+                <a href="#" class="rounded-2xl border border-slate-200/80 px-4 py-3 text-sm font-semibold text-slate-900 transition hover:border-emerald-400 hover:text-emerald-500 md:col-span-2">Магазины</a>
+              </nav>
+
+              <div class="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                <a href="#" class="inline-flex items-center justify-center gap-3 rounded-full border border-slate-200 px-5 py-3 text-sm font-semibold text-slate-900 transition hover:border-emerald-400 hover:text-emerald-500">
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                    <path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Z" />
+                    <path d="M4 20a8 8 0 0 1 16 0" stroke-linecap="round" />
+                  </svg>
+                  <span>Вход</span>
+                </a>
+
+                <a href="#" class="inline-flex w-full items-center justify-center rounded-full bg-[#00d46a] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#00bf60] focus:outline-none focus:ring-4 focus:ring-emerald-200 sm:w-auto">
+                  Связаться с нами
+                </a>
+              </div>
+            </div>
+          </header>
+        </div>
+      </section>
+
+      <section class="mt-3 px-4 pb-10 sm:mt-5 sm:px-6 sm:pb-12 lg:px-8 lg:pb-14">
+        <div class="relative overflow-hidden rounded-[28px] bg-[linear-gradient(135deg,#6d5df6_0%,#517de6_48%,#37c1f1_100%)] [box-shadow:0_24px_64px_rgba(56,95,193,0.22)]">
+          <div aria-hidden="true" class="absolute inset-0">
+            <div class="absolute left-[-8%] top-[-12%] h-40 w-40 rounded-full bg-white/10 blur-3xl sm:h-56 sm:w-56"></div>
+            <div class="absolute bottom-[-18%] left-[18%] h-48 w-48 rounded-full bg-fuchsia-300/15 blur-3xl sm:h-72 sm:w-72"></div>
+            <div class="absolute right-[-8%] top-[10%] h-44 w-44 rounded-full bg-white/12 blur-3xl sm:h-64 sm:w-64"></div>
+          </div>
+
+          <div class="relative mx-auto max-w-[1240px] px-6 py-9 sm:px-8 sm:py-11 lg:px-12 lg:py-14 xl:min-h-[230px] xl:px-16 xl:py-16">
+            <div class="max-w-[760px]">
+              <div class="flex flex-wrap items-center gap-2 text-sm text-white/75">
+                <a href="./index.html" class="transition hover:text-white">Главная</a>
+                <span>/</span>
+                <span>Часто задаваемые вопросы</span>
+              </div>
+
+              <h1 class="mt-6 max-w-[760px] text-[28px] font-extrabold leading-[1.12] tracking-[-0.04em] text-white sm:text-[36px] lg:text-[44px] xl:text-[52px]">
+                Отвечаем на вопросы доставки
+              </h1>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-4 pb-12 sm:px-6 sm:pb-14 lg:px-8 lg:pb-16">
+        <div class="mx-auto max-w-[1240px]">
+          <div class="mx-auto max-w-[1080px] rounded-[28px] bg-white px-5 py-5 [box-shadow:0_18px_60px_rgba(15,23,42,0.06)] sm:px-8 sm:py-6 lg:px-10">
+            <label class="block">
+              <span class="text-sm font-semibold text-slate-900 sm:text-base">Поиск в вопросах и ответах:</span>
+              <span class="mt-4 flex items-center gap-3 border-b border-slate-900/20 pb-3">
+                <input
+                  type="search"
+                  placeholder="Введите свой вопрос..."
+                  class="w-full bg-transparent text-base text-slate-700 outline-none placeholder:text-slate-400 sm:text-lg"
+                />
+                <svg class="h-5 w-5 shrink-0 text-[#02cd7d]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="m21 21-4.35-4.35" stroke-linecap="round" />
+                  <circle cx="11" cy="11" r="6.5" />
+                </svg>
+              </span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-4 pb-12 sm:px-6 sm:pb-14 lg:px-8 lg:pb-16">
+        <div class="mx-auto max-w-[1240px]">
+          <div class="mx-auto max-w-[1080px]">
+            <h2 class="text-[28px] font-extrabold leading-[1.15] tracking-[-0.04em] text-slate-900 sm:text-[32px]">
+              Виртуальный адрес в Великобритании
+            </h2>
+
+            <div class="mt-8 space-y-3 sm:mt-10 sm:space-y-4">
+              <div class="overflow-hidden rounded-[22px] bg-white [box-shadow:0_16px_42px_rgba(15,23,42,0.05)]">
+                <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-7" aria-expanded="false">
+                  <span class="text-sm font-semibold leading-[1.5] text-slate-900 sm:text-base">Что делать, если Вы забыли указать трек номер посылки в своём аккаунте?</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-[#02cd7d] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div class="faq-panel hidden border-t border-slate-200 px-5 py-4 text-sm leading-[1.7] text-slate-500 sm:px-7 sm:text-base">
+                  Напишите нам в поддержку и укажите магазин, дату заказа и трек-номер. Мы поможем привязать отправление к вашему кабинету.
+                </div>
+              </div>
+
+              <div class="overflow-hidden rounded-[22px] bg-white [box-shadow:0_16px_42px_rgba(15,23,42,0.05)]">
+                <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-7" aria-expanded="false">
+                  <span class="text-sm font-semibold leading-[1.5] text-slate-900 sm:text-base">Как я узнаю, что заказ пришёл на склад?</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-[#02cd7d] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div class="faq-panel hidden border-t border-slate-200 px-5 py-4 text-sm leading-[1.7] text-slate-500 sm:px-7 sm:text-base">
+                  После приёмки посылки вы увидите её в личном кабинете и получите уведомление на электронную почту.
+                </div>
+              </div>
+
+              <div class="overflow-hidden rounded-[22px] bg-white [box-shadow:0_16px_42px_rgba(15,23,42,0.05)]">
+                <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-7" aria-expanded="false">
+                  <span class="text-sm font-semibold leading-[1.5] text-slate-900 sm:text-base">Покупки на eBay / Amazon / B&amp;H?</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-[#02cd7d] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div class="faq-panel hidden border-t border-slate-200 px-5 py-4 text-sm leading-[1.7] text-slate-500 sm:px-7 sm:text-base">
+                  Да, вы можете отправлять покупки из популярных маркетплейсов и онлайн-магазинов на ваш виртуальный адрес в Великобритании.
+                </div>
+              </div>
+
+              <div class="overflow-hidden rounded-[22px] bg-white [box-shadow:0_16px_42px_rgba(15,23,42,0.05)]">
+                <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-7" aria-expanded="false">
+                  <span class="text-sm font-semibold leading-[1.5] text-slate-900 sm:text-base">Что делать, если трек, код и другие данные отправления не совпадают?</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-[#02cd7d] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div class="faq-panel hidden border-t border-slate-200 px-5 py-4 text-sm leading-[1.7] text-slate-500 sm:px-7 sm:text-base">
+                  Такое возможно при частичных отгрузках. Свяжитесь с поддержкой и отправьте скриншоты заказа, чтобы мы быстрее нашли посылку.
+                </div>
+              </div>
+
+              <div class="overflow-hidden rounded-[22px] bg-white [box-shadow:0_16px_42px_rgba(15,23,42,0.05)]">
+                <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-7" aria-expanded="false">
+                  <span class="text-sm font-semibold leading-[1.5] text-slate-900 sm:text-base">Как купить на виртуальный адрес?</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-[#02cd7d] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div class="faq-panel hidden border-t border-slate-200 px-5 py-4 text-sm leading-[1.7] text-slate-500 sm:px-7 sm:text-base">
+                  Зарегистрируйтесь, получите адрес склада и укажите его как адрес доставки при оформлении заказа в магазине.
+                </div>
+              </div>
+
+              <div class="overflow-hidden rounded-[22px] bg-white [box-shadow:0_16px_42px_rgba(15,23,42,0.05)]">
+                <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-7" aria-expanded="false">
+                  <span class="text-sm font-semibold leading-[1.5] text-slate-900 sm:text-base">Сколько стоит виртуальный адрес?</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-[#02cd7d] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div class="faq-panel hidden border-t border-slate-200 px-5 py-4 text-sm leading-[1.7] text-slate-500 sm:px-7 sm:text-base">
+                  Виртуальный адрес предоставляется бесплатно после регистрации. Оплачиваются только доставка и дополнительные услуги склада.
+                </div>
+              </div>
+
+              <div class="overflow-hidden rounded-[22px] bg-white [box-shadow:0_16px_42px_rgba(15,23,42,0.05)]">
+                <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-7" aria-expanded="false">
+                  <span class="text-sm font-semibold leading-[1.5] text-slate-900 sm:text-base">Как покупать на виртуальный адрес через оператора?</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-[#02cd7d] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div class="faq-panel hidden border-t border-slate-200 px-5 py-4 text-sm leading-[1.7] text-slate-500 sm:px-7 sm:text-base">
+                  Пришлите ссылку на товар, а наши операторы выкупят заказ, оформят доставку на склад и подготовят его к отправке.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-4 pb-12 sm:px-6 sm:pb-14 lg:px-8 lg:pb-16">
+        <div class="mx-auto max-w-[1240px]">
+          <div class="mx-auto max-w-[1080px]">
+            <h2 class="text-[28px] font-extrabold leading-[1.15] tracking-[-0.04em] text-slate-900 sm:text-[32px]">
+              Покупки в магазинах Англии, скидки и промокоды
+            </h2>
+
+            <div class="mt-8 space-y-3 sm:mt-10 sm:space-y-4">
+              <div class="overflow-hidden rounded-[22px] bg-white [box-shadow:0_16px_42px_rgba(15,23,42,0.05)]">
+                <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-7" aria-expanded="false">
+                  <span class="text-sm font-semibold leading-[1.5] text-slate-900 sm:text-base">Анонс скидочных купонов и промокодов</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-[#02cd7d] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div class="faq-panel hidden border-t border-slate-200 px-5 py-4 text-sm leading-[1.7] text-slate-500 sm:px-7 sm:text-base">
+                  Мы публикуем актуальные скидки и промокоды в личном кабинете, рассылке и социальных сетях OkeyPost.
+                </div>
+              </div>
+
+              <div class="overflow-hidden rounded-[22px] bg-white [box-shadow:0_16px_42px_rgba(15,23,42,0.05)]">
+                <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-7" aria-expanded="false">
+                  <span class="text-sm font-semibold leading-[1.5] text-slate-900 sm:text-base">Как узнать пришли ли заказы полностью?</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-[#02cd7d] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div class="faq-panel hidden border-t border-slate-200 px-5 py-4 text-sm leading-[1.7] text-slate-500 sm:px-7 sm:text-base">
+                  Сравните содержимое фактической посылки с деталями заказа в магазине и данными в вашем кабинете OkeyPost.
+                </div>
+              </div>
+
+              <div class="overflow-hidden rounded-[22px] bg-white [box-shadow:0_16px_42px_rgba(15,23,42,0.05)]">
+                <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-7" aria-expanded="false">
+                  <span class="text-sm font-semibold leading-[1.5] text-slate-900 sm:text-base">Как узнать, что заказ пришел на склад?</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-[#02cd7d] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div class="faq-panel hidden border-t border-slate-200 px-5 py-4 text-sm leading-[1.7] text-slate-500 sm:px-7 sm:text-base">
+                  После приёмки заказ автоматически появляется в кабинете, а статус доставки обновляется на подтверждённый.
+                </div>
+              </div>
+
+              <div class="overflow-hidden rounded-[22px] bg-white [box-shadow:0_16px_42px_rgba(15,23,42,0.05)]">
+                <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-7" aria-expanded="false">
+                  <span class="text-sm font-semibold leading-[1.5] text-slate-900 sm:text-base">Что такое выкуп в консолидации?</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-[#02cd7d] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div class="faq-panel hidden border-t border-slate-200 px-5 py-4 text-sm leading-[1.7] text-slate-500 sm:px-7 sm:text-base">
+                  Это когда несколько покупок сначала собираются на складе, а затем объединяются в одну посылку для экономии на доставке.
+                </div>
+              </div>
+
+              <div class="overflow-hidden rounded-[22px] bg-white [box-shadow:0_16px_42px_rgba(15,23,42,0.05)]">
+                <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-7" aria-expanded="false">
+                  <span class="text-sm font-semibold leading-[1.5] text-slate-900 sm:text-base">Как понять, что заказ куплен?</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-[#02cd7d] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div class="faq-panel hidden border-t border-slate-200 px-5 py-4 text-sm leading-[1.7] text-slate-500 sm:px-7 sm:text-base">
+                  Магазин отправляет подтверждение на email, а при покупке через оператора мы также фиксируем статус заказа в кабинете.
+                </div>
+              </div>
+
+              <div class="overflow-hidden rounded-[22px] bg-white [box-shadow:0_16px_42px_rgba(15,23,42,0.05)]">
+                <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-7" aria-expanded="false">
+                  <span class="text-sm font-semibold leading-[1.5] text-slate-900 sm:text-base">Можно ли купить с частичной предоплатой?</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-[#02cd7d] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div class="faq-panel hidden border-t border-slate-200 px-5 py-4 text-sm leading-[1.7] text-slate-500 sm:px-7 sm:text-base">
+                  Это зависит от условий конкретного магазина. Если оформляете выкуп через оператора, мы подскажем доступные варианты оплаты.
+                </div>
+              </div>
+
+              <div class="overflow-hidden rounded-[22px] bg-white [box-shadow:0_16px_42px_rgba(15,23,42,0.05)]">
+                <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-7" aria-expanded="false">
+                  <span class="text-sm font-semibold leading-[1.5] text-slate-900 sm:text-base">Что такое обычный заказ?</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-[#02cd7d] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div class="faq-panel hidden border-t border-slate-200 px-5 py-4 text-sm leading-[1.7] text-slate-500 sm:px-7 sm:text-base">
+                  Это самостоятельная покупка в магазине, когда вы сами оплачиваете товар и указываете адрес склада OkeyPost как адрес доставки.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-4 pb-12 sm:px-6 sm:pb-14 lg:px-8 lg:pb-16">
+        <div class="mx-auto max-w-[1240px]">
+          <div class="mx-auto max-w-[1080px]">
+            <h2 class="text-[28px] font-extrabold leading-[1.15] tracking-[-0.04em] text-slate-900 sm:text-[32px]">
+              Доставка из Англии
+            </h2>
+
+            <div class="mt-8 space-y-3 sm:mt-10 sm:space-y-4">
+              <div class="overflow-hidden rounded-[22px] bg-white [box-shadow:0_16px_42px_rgba(15,23,42,0.05)]">
+                <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-7" aria-expanded="false">
+                  <span class="text-sm font-semibold leading-[1.5] text-slate-900 sm:text-base">Как часто мы отправляем товары из России?</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-[#02cd7d] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div class="faq-panel hidden border-t border-slate-200 px-5 py-4 text-sm leading-[1.7] text-slate-500 sm:px-7 sm:text-base">
+                  Отправки из Великобритании формируются регулярно несколько раз в неделю, в зависимости от выбранного способа доставки.
+                </div>
+              </div>
+
+              <div class="overflow-hidden rounded-[22px] bg-white [box-shadow:0_16px_42px_rgba(15,23,42,0.05)]">
+                <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-7" aria-expanded="false">
+                  <span class="text-sm font-semibold leading-[1.5] text-slate-900 sm:text-base">Возможно ли доставка в страны, не указанные на сайте?</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-[#02cd7d] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div class="faq-panel hidden border-t border-slate-200 px-5 py-4 text-sm leading-[1.7] text-slate-500 sm:px-7 sm:text-base">
+                  В ряде случаев это возможно. Напишите нам в поддержку, и мы уточним доступные варианты отправки под вашу страну.
+                </div>
+              </div>
+
+              <div class="overflow-hidden rounded-[22px] bg-white [box-shadow:0_16px_42px_rgba(15,23,42,0.05)]">
+                <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-7" aria-expanded="false">
+                  <span class="text-sm font-semibold leading-[1.5] text-slate-900 sm:text-base">Сколько стоит доставка в Казахстан и другие страны Азии, кроме России?</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-[#02cd7d] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div class="faq-panel hidden border-t border-slate-200 px-5 py-4 text-sm leading-[1.7] text-slate-500 sm:px-7 sm:text-base">
+                  Стоимость зависит от страны, веса и способа доставки. Для точного расчёта лучше воспользоваться калькулятором или написать нам.
+                </div>
+              </div>
+
+              <div class="overflow-hidden rounded-[22px] bg-white [box-shadow:0_16px_42px_rgba(15,23,42,0.05)]">
+                <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-7" aria-expanded="false">
+                  <span class="text-sm font-semibold leading-[1.5] text-slate-900 sm:text-base">Как дешевле всего отправить маленькую посылку в Россию?</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-[#02cd7d] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div class="faq-panel hidden border-t border-slate-200 px-5 py-4 text-sm leading-[1.7] text-slate-500 sm:px-7 sm:text-base">
+                  Обычно самый выгодный вариант для небольших отправлений — мелкие пакеты или экономичная почтовая доставка.
+                </div>
+              </div>
+
+              <div class="overflow-hidden rounded-[22px] bg-white [box-shadow:0_16px_42px_rgba(15,23,42,0.05)]">
+                <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-7" aria-expanded="false">
+                  <span class="text-sm font-semibold leading-[1.5] text-slate-900 sm:text-base">Как дешевле всего отправить посылку в Россию?</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-[#02cd7d] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div class="faq-panel hidden border-t border-slate-200 px-5 py-4 text-sm leading-[1.7] text-slate-500 sm:px-7 sm:text-base">
+                  Чтобы снизить стоимость, объединяйте покупки в одну посылку, убирайте лишнюю упаковку и выбирайте подходящий тариф по весу.
+                </div>
+              </div>
+
+              <div class="overflow-hidden rounded-[22px] bg-white [box-shadow:0_16px_42px_rgba(15,23,42,0.05)]">
+                <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-7" aria-expanded="false">
+                  <span class="text-sm font-semibold leading-[1.5] text-slate-900 sm:text-base">Какая стоимость и сроки доставки из Англии в Россию?</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-[#02cd7d] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div class="faq-panel hidden border-t border-slate-200 px-5 py-4 text-sm leading-[1.7] text-slate-500 sm:px-7 sm:text-base">
+                  Сроки и цена зависят от выбранного метода доставки, текущих тарифов, веса, объёма и набора дополнительных услуг.
+                </div>
+              </div>
+
+              <div class="overflow-hidden rounded-[22px] bg-white [box-shadow:0_16px_42px_rgba(15,23,42,0.05)]">
+                <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-7" aria-expanded="false">
+                  <span class="text-sm font-semibold leading-[1.5] text-slate-900 sm:text-base">Что такое обычная доставка?</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-[#02cd7d] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div class="faq-panel hidden border-t border-slate-200 px-5 py-4 text-sm leading-[1.7] text-slate-500 sm:px-7 sm:text-base">
+                  Это стандартная схема отправки, при которой посылка проходит обычную обработку на складе без специальных опций ускорения или допупаковки.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-4 pb-12 sm:px-6 sm:pb-14 lg:px-8 lg:pb-16">
+        <div class="mx-auto max-w-[1240px]">
+          <div class="mx-auto max-w-[1080px]">
+            <h2 class="text-[28px] font-extrabold leading-[1.15] tracking-[-0.04em] text-slate-900 sm:text-[32px]">
+              Оплата
+            </h2>
+
+            <div class="mt-8 space-y-3 sm:mt-10 sm:space-y-4">
+              <div class="overflow-hidden rounded-[22px] bg-white [box-shadow:0_16px_42px_rgba(15,23,42,0.05)]">
+                <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-7" aria-expanded="false">
+                  <span class="text-sm font-semibold leading-[1.5] text-slate-900 sm:text-base">Где найти реквизиты для оплаты? И как оплатить?</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-[#02cd7d] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div class="faq-panel hidden border-t border-slate-200 px-5 py-4 text-sm leading-[1.7] text-slate-500 sm:px-7 sm:text-base">
+                  Реквизиты и способы оплаты отображаются в вашем личном кабинете после оформления услуги или посылки к отправке.
+                </div>
+              </div>
+
+              <div class="overflow-hidden rounded-[22px] bg-white [box-shadow:0_16px_42px_rgba(15,23,42,0.05)]">
+                <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-7" aria-expanded="false">
+                  <span class="text-sm font-semibold leading-[1.5] text-slate-900 sm:text-base">Как оплатить через пайпал?</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-[#02cd7d] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div class="faq-panel hidden border-t border-slate-200 px-5 py-4 text-sm leading-[1.7] text-slate-500 sm:px-7 sm:text-base">
+                  Если для вашей услуги доступен PayPal, система предложит этот способ на этапе оплаты. Далее вы подтверждаете платёж в своём аккаунте PayPal.
+                </div>
+              </div>
+
+              <div class="overflow-hidden rounded-[22px] bg-white [box-shadow:0_16px_42px_rgba(15,23,42,0.05)]">
+                <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-7" aria-expanded="false">
+                  <span class="text-sm font-semibold leading-[1.5] text-slate-900 sm:text-base">Какие способы оплаты вы принимаете из России?</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-[#02cd7d] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div class="faq-panel hidden border-t border-slate-200 px-5 py-4 text-sm leading-[1.7] text-slate-500 sm:px-7 sm:text-base">
+                  Доступные варианты зависят от услуги, но обычно это банковские карты, электронные платёжные системы и внутренний баланс в личном кабинете.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="px-4 pb-12 sm:px-6 sm:pb-14 lg:px-8 lg:pb-16">
+        <div class="mx-auto max-w-[1240px]">
+          <div class="mx-auto max-w-[1080px]">
+            <h2 class="text-[28px] font-extrabold leading-[1.15] tracking-[-0.04em] text-slate-900 sm:text-[32px]">
+              Общие вопросы
+            </h2>
+
+            <div class="mt-8 space-y-3 sm:mt-10 sm:space-y-4">
+              <div class="overflow-hidden rounded-[22px] bg-white [box-shadow:0_16px_42px_rgba(15,23,42,0.05)]">
+                <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-7" aria-expanded="false">
+                  <span class="text-sm font-semibold leading-[1.5] text-slate-900 sm:text-base">Какой ваш фактический адрес? Как с вами связаться? Какой график работы?</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-[#02cd7d] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div class="faq-panel hidden border-t border-slate-200 px-5 py-4 text-sm leading-[1.7] text-slate-500 sm:px-7 sm:text-base">
+                  Контакты, адреса складов и актуальное время работы отображаются в вашем личном кабинете и в разделе с контактной информацией. Для быстрых вопросов удобнее всего писать нам через форму на сайте или в соцсетях.
+                </div>
+              </div>
+
+              <div class="overflow-hidden rounded-[22px] bg-white [box-shadow:0_16px_42px_rgba(15,23,42,0.05)]">
+                <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-7" aria-expanded="false">
+                  <span class="text-sm font-semibold leading-[1.5] text-slate-900 sm:text-base">Я не уверен в весе нескольких покупок, как определить стоимость заранее?</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-[#02cd7d] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div class="faq-panel hidden border-t border-slate-200 px-5 py-4 text-sm leading-[1.7] text-slate-500 sm:px-7 sm:text-base">
+                  Вы можете использовать онлайн-калькулятор на странице цен и указать примерный вес. После поступления товаров на склад мы зафиксируем точный вес и итоговая стоимость станет видна в кабинете.
+                </div>
+              </div>
+
+              <div class="overflow-hidden rounded-[22px] bg-white [box-shadow:0_16px_42px_rgba(15,23,42,0.05)]">
+                <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-7" aria-expanded="false">
+                  <span class="text-sm font-semibold leading-[1.5] text-slate-900 sm:text-base">Купил на eBay, продавец не отправляет заказ, нужен самовывоз. Сможете помочь?</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-[#02cd7d] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div class="faq-panel hidden border-t border-slate-200 px-5 py-4 text-sm leading-[1.7] text-slate-500 sm:px-7 sm:text-base">
+                  В нестандартных ситуациях лучше заранее написать оператору. Мы подскажем, возможен ли самовывоз для конкретного магазина или продавца и какие данные понадобятся для оформления.
+                </div>
+              </div>
+
+              <div class="overflow-hidden rounded-[22px] bg-white [box-shadow:0_16px_42px_rgba(15,23,42,0.05)]">
+                <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-7" aria-expanded="false">
+                  <span class="text-sm font-semibold leading-[1.5] text-slate-900 sm:text-base">Сколько стоит удаление инвойса или лишней упаковки из коробки?</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-[#02cd7d] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div class="faq-panel hidden border-t border-slate-200 px-5 py-4 text-sm leading-[1.7] text-slate-500 sm:px-7 sm:text-base">
+                  Стоимость зависит от выбранной услуги склада. Актуальные тарифы на удаление инвойсов, коробок и дополнительную упаковку всегда указаны на странице цен.
+                </div>
+              </div>
+
+              <div class="overflow-hidden rounded-[22px] bg-white [box-shadow:0_16px_42px_rgba(15,23,42,0.05)]">
+                <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-7" aria-expanded="false">
+                  <span class="text-sm font-semibold leading-[1.5] text-slate-900 sm:text-base">Какой срок бесплатного хранения посылок на складе?</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-[#02cd7d] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div class="faq-panel hidden border-t border-slate-200 px-5 py-4 text-sm leading-[1.7] text-slate-500 sm:px-7 sm:text-base">
+                  Базовый период бесплатного хранения зависит от типа отправления и условий склада. Обычно этот срок указывается в кабинете рядом с каждой входящей посылкой.
+                </div>
+              </div>
+
+              <div class="overflow-hidden rounded-[22px] bg-white [box-shadow:0_16px_42px_rgba(15,23,42,0.05)]">
+                <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-7" aria-expanded="false">
+                  <span class="text-sm font-semibold leading-[1.5] text-slate-900 sm:text-base">Сколько стоит консолидация нескольких заказов?</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-[#02cd7d] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div class="faq-panel hidden border-t border-slate-200 px-5 py-4 text-sm leading-[1.7] text-slate-500 sm:px-7 sm:text-base">
+                  Цена консолидации зависит от тарифа склада и дополнительных действий с посылками. Точную сумму вы увидите до подтверждения услуги, когда все заказы окажутся на складе.
+                </div>
+              </div>
+
+              <div class="overflow-hidden rounded-[22px] bg-white [box-shadow:0_16px_42px_rgba(15,23,42,0.05)]">
+                <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-7" aria-expanded="false">
+                  <span class="text-sm font-semibold leading-[1.5] text-slate-900 sm:text-base">Как рассчитывается стоимость услуг и доставки?</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-[#02cd7d] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div class="faq-panel hidden border-t border-slate-200 px-5 py-4 text-sm leading-[1.7] text-slate-500 sm:px-7 sm:text-base">
+                  На итоговую стоимость влияют вес, объём, выбранный метод доставки и дополнительные складские услуги. Предварительную оценку можно получить через калькулятор, а финальная сумма появится после обработки заказа.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="px-4 pb-16 sm:px-6 sm:pb-18 lg:px-8 lg:pb-20">
+        <div class="mx-auto max-w-[1240px]">
+          <div class="mx-auto max-w-[1080px]">
+            <h2 class="text-[28px] font-extrabold leading-[1.15] tracking-[-0.04em] text-slate-900 sm:text-[32px]">
+              Посылки
+            </h2>
+
+            <div class="mt-8 space-y-3 sm:mt-10 sm:space-y-4">
+              <div class="overflow-hidden rounded-[22px] bg-white [box-shadow:0_16px_42px_rgba(15,23,42,0.05)]">
+                <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-7" aria-expanded="false">
+                  <span class="text-sm font-semibold leading-[1.5] text-slate-900 sm:text-base">Как отправить посылку, если я уже нахожусь в России?</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-[#02cd7d] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div class="faq-panel hidden border-t border-slate-200 px-5 py-4 text-sm leading-[1.7] text-slate-500 sm:px-7 sm:text-base">
+                  Вам нужно оформить отправку через личный кабинет и выбрать способ доставки. После этого система подскажет адрес склада и дальнейшие шаги по подготовке посылки к отправке.
+                </div>
+              </div>
+
+              <div class="overflow-hidden rounded-[22px] bg-white [box-shadow:0_16px_42px_rgba(15,23,42,0.05)]">
+                <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-7" aria-expanded="false">
+                  <span class="text-sm font-semibold leading-[1.5] text-slate-900 sm:text-base">Как понять примерную стоимость отправки до того, как посылка попадёт на склад?</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-[#02cd7d] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div class="faq-panel hidden border-t border-slate-200 px-5 py-4 text-sm leading-[1.7] text-slate-500 sm:px-7 sm:text-base">
+                  Для предварительной оценки удобно использовать калькулятор на странице цен. Достаточно указать примерный вес, страну и дополнительные услуги, а точная сумма появится после приёмки на складе.
+                </div>
+              </div>
+
+              <div class="overflow-hidden rounded-[22px] bg-white [box-shadow:0_16px_42px_rgba(15,23,42,0.05)]">
+                <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-7" aria-expanded="false">
+                  <span class="text-sm font-semibold leading-[1.5] text-slate-900 sm:text-base">Что такое частичная отправка? Зачем она нужна, если вещей много и они разные?</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-[#02cd7d] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div class="faq-panel hidden border-t border-slate-200 px-5 py-4 text-sm leading-[1.7] text-slate-500 sm:px-7 sm:text-base">
+                  Частичная отправка позволяет разделить товары на несколько посылок. Это бывает полезно, если нужно быстрее получить часть заказа, уменьшить вес отправления или разнести разные категории товаров.
+                </div>
+              </div>
+
+              <div class="overflow-hidden rounded-[22px] bg-white [box-shadow:0_16px_42px_rgba(15,23,42,0.05)]">
+                <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-7" aria-expanded="false">
+                  <span class="text-sm font-semibold leading-[1.5] text-slate-900 sm:text-base">Как подготовить декларацию, чтобы не ошибиться, если вещей не очень много?</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-[#02cd7d] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div class="faq-panel hidden border-t border-slate-200 px-5 py-4 text-sm leading-[1.7] text-slate-500 sm:px-7 sm:text-base">
+                  В декларации важно указывать реальные наименования товаров, их количество и стоимость. Если сомневаетесь в формулировках, можно обратиться к оператору перед подтверждением отправки.
+                </div>
+              </div>
+
+              <div class="overflow-hidden rounded-[22px] bg-white [box-shadow:0_16px_42px_rgba(15,23,42,0.05)]">
+                <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-7" aria-expanded="false">
+                  <span class="text-sm font-semibold leading-[1.5] text-slate-900 sm:text-base">Как отправить покупку? Как сделать замеры? Сколько это стоит?</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-[#02cd7d] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div class="faq-panel hidden border-t border-slate-200 px-5 py-4 text-sm leading-[1.7] text-slate-500 sm:px-7 sm:text-base">
+                  После поступления товара на склад вы можете заказать дополнительные услуги, включая замеры и фото. Их стоимость зависит от тарифа склада и отображается до подтверждения услуги.
+                </div>
+              </div>
+
+              <div class="overflow-hidden rounded-[22px] bg-white [box-shadow:0_16px_42px_rgba(15,23,42,0.05)]">
+                <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-7" aria-expanded="false">
+                  <span class="text-sm font-semibold leading-[1.5] text-slate-900 sm:text-base">Как отправить несколько заказов в одной посылке? Сколько это стоит?</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-[#02cd7d] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div class="faq-panel hidden border-t border-slate-200 px-5 py-4 text-sm leading-[1.7] text-slate-500 sm:px-7 sm:text-base">
+                  Для этого нужно дождаться поступления всех заказов и выбрать услугу консолидации. Финальная цена зависит от числа посылок, их объёма и дополнительных операций на складе.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="px-4 pb-12 sm:px-6 sm:pb-14 lg:px-8 xl:pb-16">
+        <div class="mx-auto max-w-[1240px] overflow-hidden rounded-[32px] bg-[linear-gradient(135deg,#6d58c9_0%,#35c9ff_100%)] text-white shadow-[0_24px_80px_rgba(86,104,189,0.18)]">
+          <div class="px-6 py-10 sm:px-10 md:px-12 md:py-12 lg:px-16 lg:py-14 xl:px-20">
+            <div class="grid items-center gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-10">
+              <h2 class="max-w-[640px] text-center text-[28px] font-extrabold leading-[1.2] sm:text-[34px] lg:text-left lg:text-[42px]">
+                Остались вопросы? Спросите нас в соцсетях!
+              </h2>
+
+              <div class="flex flex-wrap items-center justify-center gap-4 lg:justify-end">
+                <a
+                  href="#"
+                  aria-label="WhatsApp"
+                  class="flex h-14 w-14 items-center justify-center rounded-full border border-white/65 transition hover:bg-white/10"
+                >
+                  <img src="./img/votsap.svg" alt="" class="h-7 w-7" />
+                </a>
+                <a
+                  href="#"
+                  aria-label="Viber"
+                  class="flex h-14 w-14 items-center justify-center rounded-full border border-white/65 transition hover:bg-white/10"
+                >
+                  <img src="./img/viber.svg" alt="" class="h-7 w-7" />
+                </a>
+                <a
+                  href="#"
+                  aria-label="Online chat"
+                  class="flex h-14 w-14 items-center justify-center rounded-full border border-white/65 transition hover:bg-white/10"
+                >
+                  <img src="./img/OnlineChat.svg" alt="" class="h-7 w-7 brightness-[10]" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="px-4 pb-8 sm:px-6 sm:pb-10 lg:px-8 lg:pb-12">
+      <div class="mx-auto max-w-[1240px]">
+        <div class="grid gap-8 pb-8 sm:grid-cols-2 lg:grid-cols-[240px_repeat(3,minmax(0,1fr))] lg:gap-10 xl:gap-12 xl:pb-10">
+          <div class="text-center sm:text-left">
+            <a href="./index.html" class="inline-flex" aria-label="OkeyPost">
+              <img src="./img/logo.svg" alt="OkeyPost" class="h-10 w-auto sm:h-12" />
+            </a>
+
+            <div class="mt-8 flex flex-wrap items-center justify-center gap-3 sm:justify-start">
+              <a
+                href="#"
+                aria-label="WhatsApp"
+                class="flex h-12 w-12 items-center justify-center rounded-full border border-[#02cd7d] transition hover:bg-[#02cd7d]/5"
+              >
+                <img src="./img/votsap.svg" alt="" class="h-6 w-6" />
+              </a>
+              <a
+                href="#"
+                aria-label="Viber"
+                class="flex h-12 w-12 items-center justify-center rounded-full border border-[#7b5cff] transition hover:bg-[#7b5cff]/5"
+              >
+                <img src="./img/viber.svg" alt="" class="h-6 w-6" />
+              </a>
+              <a
+                href="#"
+                aria-label="Online chat"
+                class="flex h-12 w-12 items-center justify-center rounded-full border border-[#36cfff] transition hover:bg-[#36cfff]/5"
+              >
+                <img src="./img/OnlineChat.svg" alt="" class="h-6 w-6" />
+              </a>
+            </div>
+          </div>
+
+          <div class="text-center sm:text-left">
+            <h3 class="text-lg font-extrabold leading-tight text-slate-900">О компании</h3>
+            <ul class="mt-5 space-y-3 text-base leading-[1.5] text-slate-500">
+              <li><a href="#" class="transition hover:text-[#02cd7d]">Услуги</a></li>
+              <li><a href="./p4.html" class="transition hover:text-[#02cd7d]">Цены</a></li>
+              <li><a href="#" class="transition hover:text-[#02cd7d]">Отзывы</a></li>
+              <li><a href="#" class="transition hover:text-[#02cd7d]">Контакты</a></li>
+              <li><a href="#" class="transition hover:text-[#02cd7d]">Вакансии</a></li>
+              <li><a href="#" class="transition hover:text-[#02cd7d]">Соглашение о персональных данных</a></li>
+              <li><a href="#" class="transition hover:text-[#02cd7d]">Условия использования</a></li>
+            </ul>
+          </div>
+
+          <div class="text-center sm:text-left">
+            <h3 class="text-lg font-extrabold leading-tight text-slate-900">Полезное</h3>
+            <ul class="mt-5 space-y-3 text-base leading-[1.5] text-slate-500">
+              <li><a href="./p2.html" class="transition hover:text-[#02cd7d]">Как работает наш сервис</a></li>
+              <li><a href="./p2.html" class="transition hover:text-[#02cd7d]">Как покупать с оператором</a></li>
+              <li><a href="./p5.html" class="transition hover:text-[#02cd7d]">Ответы на частые вопросы</a></li>
+              <li><a href="#" class="transition hover:text-[#02cd7d]">Популярные магазины</a></li>
+              <li><a href="#" class="transition hover:text-[#02cd7d]">Черный список магазинов</a></li>
+              <li><a href="./p3.html" class="transition hover:text-[#02cd7d]">Актуальные распродажи</a></li>
+            </ul>
+          </div>
+
+          <div class="text-center sm:text-left">
+            <h3 class="text-lg font-extrabold leading-tight text-slate-900">Спецпроекты</h3>
+            <ul class="mt-5 space-y-3 text-base leading-[1.5] text-slate-500">
+              <li><a href="#" class="transition hover:text-[#02cd7d]">50% на первую доставку</a></li>
+              <li><a href="#" class="transition hover:text-[#02cd7d]">Скидки для постоянных клиентов</a></li>
+              <li><a href="#" class="transition hover:text-[#02cd7d]">Реферальная программа</a></li>
+              <li><a href="#" class="transition hover:text-[#02cd7d]">Кэшбек Mr. Rebates и Rakuten</a></li>
+              <li><a href="#" class="transition hover:text-[#02cd7d]">Stop Fraud</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-slate-200 pt-6 text-center text-sm text-slate-500 sm:pt-8 sm:text-base">
+          &copy; 2021 Okeypost . Все права защищены.
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const menuButton = document.getElementById("menuButton");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const menuOpenIcon = document.getElementById("menuOpenIcon");
+      const menuCloseIcon = document.getElementById("menuCloseIcon");
+
+      const toggleMenu = () => {
+        const isOpen = !mobileMenu.classList.contains("hidden");
+
+        mobileMenu.classList.toggle("hidden", isOpen);
+        menuOpenIcon.classList.toggle("hidden", !isOpen);
+        menuCloseIcon.classList.toggle("hidden", isOpen);
+        menuButton.setAttribute("aria-expanded", String(!isOpen));
+        menuButton.setAttribute("aria-label", isOpen ? "Закрыть меню" : "Открыть меню");
+      };
+
+      menuButton.addEventListener("click", toggleMenu);
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 1280) {
+          mobileMenu.classList.add("hidden");
+          menuOpenIcon.classList.remove("hidden");
+          menuCloseIcon.classList.add("hidden");
+          menuButton.setAttribute("aria-expanded", "false");
+          menuButton.setAttribute("aria-label", "Открыть меню");
+        }
+      });
+      document.querySelectorAll(".faq-toggle").forEach((button) => {
+        button.addEventListener("click", () => {
+          const panel = button.nextElementSibling;
+          const icon = button.querySelector(".faq-icon");
+          const isOpen = button.getAttribute("aria-expanded") === "true";
+
+          button.setAttribute("aria-expanded", String(!isOpen));
+          panel.classList.toggle("hidden", isOpen);
+          icon.classList.toggle("rotate-180", !isOpen);
+        });
+      });
+    </script>
+  </body>
+</html>
